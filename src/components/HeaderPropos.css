@@ -1,0 +1,88 @@
+.idx_wth_ctn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 700px;
+}
+.idx_prem_frt_ctn{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+    width: 73vw;
+}
+.idx_prem_lft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 49%;
+}
+.idx_prem_h{
+    /*color: rgb(223, 56, 56);*/
+    color: rgb(85, 202, 85);
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+}
+.idx_prem_p{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 15px 0 15px 0;
+}
+.idx_prem_propos{
+    font-size: 20px;
+    color: rgb(216, 216, 216);
+}
+/*--------PREMIERE PARTIE BTN--------------*/
+.idx_prem_btn{
+    display: flex;
+    width: 50%;
+}
+.idx_prem_btn_ul{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin: 20px 0 0 0;
+    width: 100%;
+}
+.idx_prem_btn_li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px rgb(85, 202, 85) solid;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+.idx_prem_btn_li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+/*---Photo de profil---*/
+.idx_prem_btn_li img{
+    width: 60%;
+    height: 50%;
+}
+.idx_prem_img{
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    width: 49%;
+}
+/*--------PREMIERE PARTIE IMG--------------*/
+.idx_prem_img{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+.idx_prem_img img{
+    display: flex;
+    width: 400px;
+    height: 400px;
+}

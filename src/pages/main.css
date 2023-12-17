@@ -1,0 +1,14 @@
+:root{
+    --green-color: rgb(85, 202, 85);
+    --body-color: rgb(64, 69, 94);
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--body-color);
+    font-family: "Roboto", 'Quicksand', sans-serif, Verdana, Geneva ;
+}
+h2{
+    font-size: 35px;
+    color: var(--green-color);
+}

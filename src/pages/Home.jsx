@@ -1,10 +1,18 @@
 import HeaderPropos from "../components/HeaderPropos";
 import WebProjects from "../components/WebProjects";
+import { MobileGame } from "../components/MobileGame";
+import MinecraftHome from "../components/MinecraftHome"; 
+
+import '../components/HeaderPropos.css'
+import './main.css'
+import '../components/WebProjects.css'
 
 function Home(){
     return (<>
         <HeaderPropos />
         <WebProjects />
+        <MobileGame />
+        <MinecraftHome />
     </>)
 }
 

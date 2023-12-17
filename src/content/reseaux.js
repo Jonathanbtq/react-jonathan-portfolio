@@ -1,22 +1,27 @@
+import github from '../assets/img/github.png'
+import twitter from '../assets/img/twitter.png'
+import discord from '../assets/img/discord.png'
+import instagram from '../assets/img/instagram.png'
+
 const reseaux = [
     {
         name: 'twitter',
-        image: `../assets/img/twitter.png`,
+        image: twitter,
         url: 'https://twitter.com/Jonathanbtq'
     },
     {
         name: 'discord',
-        image: `assets/img/discord.png`,
+        image: discord,
         url: ''
     },
     {
         name: 'github',
-        image: `../assets/img/github.png`,
+        image: github,
         url: "https://github.com/Jonathanbtq"
     },
     {
         name: 'instagram',
-        image: `../assets/img/instagram.png`,
+        image: instagram,
         url: "https://www.instagram.com/btqjonathan/"
     },
 ]
