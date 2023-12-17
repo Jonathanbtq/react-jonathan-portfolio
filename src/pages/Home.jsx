@@ -1,7 +1,11 @@
+import HeaderPropos from "../components/HeaderPropos";
+import WebProjects from "../components/WebProjects";
+
 function Home(){
     return (<>
-        <div>Accueil</div>
+        <HeaderPropos />
+        <WebProjects />
     </>)
 }
 
-export default Home();
+export default Home;
