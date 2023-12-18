@@ -7,6 +7,7 @@ import '../components/HeaderPropos.css'
 import './main.css'
 import '../components/WebProjects.css'
 import '../components/MobileGame.css'
+import '../components/MinecraftHome.css'
 
 function Home() {
     return (<>

@@ -1,3 +1,5 @@
+import mc from '../content/minecraftProjectMaps'
+
 export default function MinecraftHome(){
     return (
         <>
@@ -11,51 +13,13 @@ export default function MinecraftHome(){
                 <div className="carousel_idx_ctn">
                     <i id="left" className="left fa-solid fa-angle-left"></i>
                     <ul className="carousel_idx">
-                        <li className="idx_card_mc_slider">
-                            <div className="img_div_mc_card">
-                                <img src="images/sliderIndex/1.png" alt=""/>
-                            </div>
-                        </li>
-                        <li className="idx_card_mc_slider">
-                            <div className="img_div_mc_card">
-                                <img src="images/sliderIndex/2.jpg" alt=""/>
-                            </div>
-                        </li>
-                        <li className="idx_card_mc_slider">
-                            <div className="img_div_mc_card">
-                                <img src="images/sliderIndex/3.png" alt=""/>
-                            </div>
-                        </li>
-                        <li className="idx_card_mc_slider">
-                            <div className="img_div_mc_card">
-                                <img src="images/sliderIndex/4.png" alt=""/>
-                            </div>
-                        </li>
-                        <li className="idx_card_mc_slider">
-                            <div className="img_div_mc_card">
-                                <img src="images/sliderIndex/5.png" alt=""/>
-                            </div>
-                        </li>
-                        <li className="idx_card_mc_slider">
-                            <div className="img_div_mc_card">
-                                <img src="images/minecraft/WhiteElf.png" alt=""/>
-                            </div>
-                        </li>
-                        <li className="idx_card_mc_slider">
-                            <div className="img_div_mc_card">
-                                <img src="images/minecraft/medieval.png" alt=""/>
-                            </div>
-                        </li>
-                        <li className="idx_card_mc_slider">
-                            <div className="img_div_mc_card">
-                                <img src="images/minecraft/ForestElf.png" alt=""/>
-                            </div>
-                        </li>
-                        <li className="idx_card_mc_slider">
-                            <div className="img_div_mc_card">
-                                <img src="images/minecraft/meilleurprojet.png" alt=""/>
-                            </div>
-                        </li>
+                        {mc.map((img, index) => (
+                            <li key={index} className="idx_card_mc_slider">
+                                <div className="img_div_mc_card">
+                                    <img src={img.img} alt=""/>
+                                </div>
+                            </li>
+                        ))}
                     </ul>
                     <i id="right" className="right fa-solid fa-angle-right"></i>
                 </div>
