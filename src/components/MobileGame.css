@@ -1,0 +1,52 @@
+.idx_deux_ctn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+.idx_deux_div {
+    display: flex;
+    justify-content: space-between;
+    max-width: 75vw;
+    border-top: rgb(85, 202, 85) solid 2px;
+}
+
+.idx_deux {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.idx_deux_dx {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding-top: 100px;
+}
+
+.idx_deux_t_g {
+    color: grey;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.idx_deux_p_gch {
+    color: white;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.idx_deux_art {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.idx_deux_img_ctn {
+    transition: all 0.2s;
+    transform: scale(1.2);
+    z-index: 1000;
+}
+
+.idx_deux_img_i {
+    width: 250px;
+}

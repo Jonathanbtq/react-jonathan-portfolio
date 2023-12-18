@@ -1,4 +1,4 @@
-export function MobileGame(){
+export function MobileGame() {
     return (
         <>
             <div className="idx_deux_ctn">
@@ -8,13 +8,13 @@ export function MobileGame(){
                         <div className="idx_deux_dx">
                             <article className="idx_deux_art">
                                 <div className="idx_deux_img">
-                                    <img src="images/jellygame/jelly_game.jpg" alt="" class="idx_deux_img_i" />
+                                    <img src="https://jonathanbotquin.fr/images/jellygame/jelly_game.jpg" alt="" class="idx_deux_img_i" />
                                 </div>
                                 <div className="idx_deux_img_ctn">
-                                    <img src="images/jellygame/Jelly_main.jpg" alt="" class="idx_deux_img_i" />
+                                    <img src="https://jonathanbotquin.fr/images/jellygame/Jelly_main.jpg" alt="" class="idx_deux_img_i" />
                                 </div>
                                 <div className="idx_deux_img_g">
-                                    <img src="images/jellygame/jelly_shop.jpg" alt="" class="idx_deux_img_i" />
+                                    <img src="https://jonathanbotquin.fr/images/jellygame/jelly_shop.jpg" alt="" class="idx_deux_img_i" />
                                 </div>
                             </article>
                         </div>
@@ -28,9 +28,9 @@ export function MobileGame(){
                                     <p>Jelly est un jeu mobile concu en C# via l'application
                                         Unity, j'ai commencé son developpement en 2020.</p>
                                     <p>Dans ce projet j'ai été aidé d'une graphiste s'occupant des dessins et animations
-                                    (crédit instagram: Lilalys).</p>
-                                    <p>C'est un jeu de platforme entièrement en 2D avec possibilité d'achat de cosmétiques, 
-                                    un Best score et un système de pièces in-game. </p>
+                                        (crédit instagram: Lilalys).</p>
+                                    <p>C'est un jeu de platforme entièrement en 2D avec possibilité d'achat de cosmétiques,
+                                        un Best score et un système de pièces in-game. </p>
                                 </div>
                                 <span className="idx_deux_span">Date de sortie prévue pour 2023.</span>
                             </div>

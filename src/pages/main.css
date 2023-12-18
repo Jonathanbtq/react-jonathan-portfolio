@@ -1,14 +1,31 @@
-:root{
+:root {
     --green-color: rgb(85, 202, 85);
     --body-color: rgb(64, 69, 94);
 }
-html, body{
+
+html,
+body {
     margin: 0;
     padding: 0;
     background-color: var(--body-color);
-    font-family: "Roboto", 'Quicksand', sans-serif, Verdana, Geneva ;
+    font-family: "Roboto", 'Quicksand', sans-serif, Verdana, Geneva;
 }
-h2{
+
+h2 {
     font-size: 35px;
     color: var(--green-color);
+}
+
+.lien_page_index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    min-height: 2vw;
+    margin-top: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--body-color);
+    background-color: var(--green-color);
 }
