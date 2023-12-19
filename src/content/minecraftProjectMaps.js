@@ -6,7 +6,7 @@ const mcProjectMaps = [
         array_options: [
             {
                 time: '15 heures',
-                theme: Medieval,
+                theme: 'Medieval',
                 size: '150x150'
             }
         ]
@@ -66,7 +66,7 @@ const mcProjectMaps = [
         array_options: [
             {
                 time: '15h',
-                theme: Medieval,
+                theme: 'Medieval',
                 size: '150x150'
             }
         ]
@@ -78,7 +78,7 @@ const mcProjectMaps = [
         array_options: [
             {
                 time: '15h',
-                theme: Medieval,
+                theme: 'Medieval',
                 size: '150x150'
             }
         ]
@@ -90,7 +90,7 @@ const mcProjectMaps = [
         array_options: [
             {
                 time: '15h',
-                theme: Medieval,
+                theme: 'Medieval',
                 size: '150x150'
             }
         ]
@@ -102,7 +102,7 @@ const mcProjectMaps = [
         array_options: [
             {
                 time: '15h',
-                theme: Medieval,
+                theme: 'Medieval',
                 size: '150x150'
             }
         ]

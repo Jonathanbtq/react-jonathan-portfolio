@@ -39,25 +39,6 @@ export default function MinecraftHome(){
                                 <span className="idx_tres_span"><a href="minecraft.html">En savoir plus...</a></span>
                             </div>
                         </div>
-
-                        <div className="idx_tres_dx">
-                            <article className="idx_tres_art">
-                                <div className="nav_tres_slider">
-                                    <div className="av_tres_slides">
-                                        <div className="slide"><img className="slide_img" src="images/sliderIndex/1.png" alt=""/>
-                                        </div>
-                                        <div className="slide"><img className="slide_img" src="images/sliderIndex/2.jpg" alt=""/>
-                                        </div>
-                                        <div className="slide"><img className="slide_img" src="images/sliderIndex/3.png" alt=""/>
-                                        </div>
-                                        <div className="slide"><img className="slide_img" src="images/sliderIndex/4.png" alt=""/>
-                                        </div>
-                                        <div className="slide"><img className="slide_img" src="images/sliderIndex/5.png" alt=""/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
                     </div>
                 </div>
             </div>

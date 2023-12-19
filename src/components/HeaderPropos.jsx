@@ -25,9 +25,8 @@ export default function HeaderPropos(){
                     </div>
                 </div>
                 
-
-                <div class="idx_prem_img">
-                    <img src={profileImg} alt="" class="idx_prem_img"/>
+                <div className="idx_prem_img">
+                    <img src={profileImg} alt="" className="idx_prem_img"/>
                 </div>
             </div>
         </div>
