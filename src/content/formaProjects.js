@@ -30,21 +30,6 @@ const formaProjects = [
         ]
     },
     {
-        name: 'Jyfera\'s spawn',
-        description: 'Spawn réalisé pour mon usage personnel. ',
-        img: 'http://jonathanbotquin.fr/images/minecraft/WhiteElf.png',
-        array_options: [
-            {
-                stacks: [
-                    'HTML',
-                    'CSS',
-                    'SYMFONY',
-                    'JS'
-                ],
-            }
-        ]
-    },
-    {
         name: 'Sunpower',
         description: 'Landing page pour une entreprise de panneaux photovoltaique',
         img: 'http://jonathanbotquin.fr/images/minecraft/ForestElf.png',

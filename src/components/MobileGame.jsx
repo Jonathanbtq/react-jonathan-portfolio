@@ -1,4 +1,12 @@
+import { useState } from "react"
+
 export function MobileGame() {
+    // const [] = useState('')
+
+    function onOver() {
+        console.log('test');
+    }
+
     return (
         <>
             <div className="idx_deux_ctn">
@@ -13,7 +21,7 @@ export function MobileGame() {
                                 <div className="idx_deux_img_ctn">
                                     <img src="https://jonathanbotquin.fr/images/jellygame/Jelly_main.jpg" alt="" class="idx_deux_img_i" />
                                 </div>
-                                <div className="idx_deux_img_g">
+                                <div className="idx_deux_img_g" onDragOver={() => onOver()}>
                                     <img src="https://jonathanbotquin.fr/images/jellygame/jelly_shop.jpg" alt="" class="idx_deux_img_i" />
                                 </div>
                             </article>
@@ -32,7 +40,7 @@ export function MobileGame() {
                                     <p>C'est un jeu de platforme entièrement en 2D avec possibilité d'achat de cosmétiques,
                                         un Best score et un système de pièces in-game. </p>
                                 </div>
-                                <span className="idx_deux_span">Date de sortie prévue pour 2023.</span>
+                                <span className="idx_deux_span">Date de sortie prévue pour 2024.</span>
                             </div>
                         </div>
 
