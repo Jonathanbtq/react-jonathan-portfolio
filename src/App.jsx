@@ -10,7 +10,7 @@ const router = createBrowserRouter([
    errorElement: <PageError />,
    children: [
      {
-       path: 'home',
+       path: '',
        element: <Home />,
      },
      {
@@ -52,7 +52,7 @@ function Root(){
   return <>
     <header>
       <nav>
-        <NavLink to="/home">Home</NavLink>
+        <NavLink to="/">Home</NavLink>
         <NavLink to="/minecraft">Minecraft</NavLink>
         <NavLink to="/contact">Contact</NavLink>
       </nav>

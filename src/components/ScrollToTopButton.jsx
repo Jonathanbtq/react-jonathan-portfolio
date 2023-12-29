@@ -14,7 +14,8 @@ const styles = {
         bottom: '20px',
         right: '20px',
         border: 'none',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        transition: 'transform 0.3s, filter 0.3s'
     },
     btn_img:{
         width: '80px',
@@ -27,7 +28,9 @@ const styles = {
         zIndex: '11',
         margin: '0',
         bottom: '0',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: 'white', // Couleur principale du texte
+        textShadow: '0 0 5px #0f0, 0 0 5px #0f0, 0 0 10px #0f0',
     }
 }
 

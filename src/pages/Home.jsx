@@ -7,14 +7,14 @@ import ReaseauxFooter from "../components/ReseauxFooter";
 import Footer from "../components/Footer";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 
-import '../components/HeaderPropos.css'
+import '../styles/HeaderPropos.css'
 import './main.css'
-import '../components/WebProjects.css'
-import '../components/MobileGame.css'
-import '../components/MinecraftHome.css'
-import '../components/FormationProject.css'
-import '../components/ReaseauxFooter.css'
-import '../components/Footer.css'
+import '../styles/WebProjects.css'
+import '../styles/MobileGame.css'
+import '../styles/MinecraftHome.css'
+import '../styles/FormationProject.css'
+import '../styles/ReaseauxFooter.css'
+import '../styles/Footer.css'
 
 function Home() {
     return (<>
