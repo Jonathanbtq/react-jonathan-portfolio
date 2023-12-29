@@ -45,6 +45,10 @@
     justify-content: center;
 }
 
+.prt_frm_card_content h3 {
+    color: white;
+}
+
 .prt_frm_card_content p {
     font-size: 15px;
     color: white;

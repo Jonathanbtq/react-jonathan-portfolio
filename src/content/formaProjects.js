@@ -2,7 +2,7 @@ const formaProjects = [
     {
         name: 'Pole-Formation',
         description: "Développement d'un site de recherche de formations (front-end & back-end).",
-        img: 'http://jonathanbotquin.fr/images/minecraft/medieval.png',
+        img: 'https://jonathanbotquin.fr/images/maquette/poleforma1.PNG',
         array_options: [
             {
                 stacks: [
@@ -17,7 +17,7 @@ const formaProjects = [
     {
         name: 'Php Projet',
         description: "Site de création et managment de projets",
-        img: 'http://jonathanbotquin.fr/images/minecraft/2022-01-07_17.35.59.png',
+        img: 'https://jonathanbotquin.fr/images/maquette/php2.PNG',
         array_options: [
             {
                 stacks: [
@@ -32,7 +32,7 @@ const formaProjects = [
     {
         name: 'Sunpower',
         description: 'Landing page pour une entreprise de panneaux photovoltaique',
-        img: 'http://jonathanbotquin.fr/images/minecraft/ForestElf.png',
+        img: 'https://jonathanbotquin.fr/images/maquette/sunpower1.PNG',
         array_options: [
             {
                 stacks: [
@@ -46,7 +46,7 @@ const formaProjects = [
     {
         name: 'Lilipinso',
         description: 'Site e-commerce',
-        img: 'https://jonathanbotquin.fr/images/lilalysshop/lilalys1.PNG',
+        img: 'https://jonathanbotquin.fr/images/maquette/Boots1.PNG',
         array_options: [
             {
                 stacks: [
@@ -58,7 +58,7 @@ const formaProjects = [
     {
         name: 'Systematic',
         description: 'Landing page site d\'appel a projets',
-        img: 'http://jonathanbotquin.fr/images/sliderIndex/1.png',
+        img: 'https://jonathanbotquin.fr/images/maquette/html1.PNG',
         array_options: [
             {
                 stacks: [

@@ -18,7 +18,7 @@ export default function FormationProjects() {
                         isEven(index)
                             ?
                             <div className="prt_frm_card" key={index}>
-                                <img src="http://jonathanbotquin.fr/images/maquette/lordblock.PNG" alt="" />
+                                <img src={projet.img} alt="" />
                                 <div className="prt_frm_card_content">
                                     <h3>{projet.name}</h3>
                                     <p>{projet.description}</p>
@@ -50,7 +50,7 @@ export default function FormationProjects() {
                                         ))}
                                     </div>
                                 </div>
-                                <img src="http://jonathanbotquin.fr/images/maquette/lordblock.PNG" alt="" />
+                                <img src={projet.img} alt="" />
                             </div>
                     ))}
                 </div>

@@ -1,10 +1,10 @@
 import { useState } from "react"
 
 export function MobileGame() {
-    // const [] = useState('')
+    const [hoveredIndex, setHoveredIndex] = useState(null);
 
-    function onOver() {
-        console.log('test');
+    function onOver(index) {
+        setHoveredIndex(index)
     }
 
     return (
@@ -15,15 +15,25 @@ export function MobileGame() {
                     <div className="idx_deux">
                         <div className="idx_deux_dx">
                             <article className="idx_deux_art">
-                                <div className="idx_deux_img">
-                                    <img src="https://jonathanbotquin.fr/images/jellygame/jelly_game.jpg" alt="" class="idx_deux_img_i" />
-                                </div>
-                                <div className="idx_deux_img_ctn">
-                                    <img src="https://jonathanbotquin.fr/images/jellygame/Jelly_main.jpg" alt="" class="idx_deux_img_i" />
-                                </div>
-                                <div className="idx_deux_img_g" onDragOver={() => onOver()}>
-                                    <img src="https://jonathanbotquin.fr/images/jellygame/jelly_shop.jpg" alt="" class="idx_deux_img_i" />
-                                </div>
+                                {[
+                                    "https://jonathanbotquin.fr/images/jellygame/jelly_game.jpg",
+                                    "https://jonathanbotquin.fr/images/jellygame/Jelly_main.jpg",
+                                    "https://jonathanbotquin.fr/images/jellygame/jelly_shop.jpg"
+                                ].map((url, index) => (
+                                    <div
+                                        key={index}
+                                        className={`idx_deux_img ${hoveredIndex === index
+                                            ? "overGameDiv"
+                                            : index === 1
+                                                ? "overGameDivMiddle"
+                                                : ""
+                                            }`}
+                                        onMouseEnter={() => onOver(index)}
+                                        onMouseLeave={() => onOver(null)}
+                                    >
+                                        <img src={url} alt="" class="idx_deux_img_i" />
+                                    </div>
+                                ))}
                             </article>
                         </div>
                         <div className="idx_deux_ctn_frt">
@@ -49,7 +59,7 @@ export function MobileGame() {
                     </div>
 
                 </div>
-            </div>
+            </div >
         </>
     )
 }

@@ -42,6 +42,25 @@
     flex-wrap: nowrap;
 }
 
+.idx_deux_img {
+    transition: transform 0.3s, filter 0.3s;
+    filter: blur(5px);
+}
+
+.overGameDiv {
+    transform: scale(1.2);
+    /* ou la valeur d'agrandissement souhaitée */
+    filter: blur(0px);
+    /* ou la valeur de floutage souhaitée */
+}
+
+.overGameDivMiddle {
+    transform: scale(1.2);
+    /* ou la valeur d'agrandissement souhaitée */
+    filter: blur(0px);
+    /* ou la valeur de floutage souhaitée */
+}
+
 .idx_deux_img_ctn {
     transition: all 0.2s;
     transform: scale(1.2);
