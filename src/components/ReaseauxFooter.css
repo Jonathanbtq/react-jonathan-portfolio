@@ -1,0 +1,33 @@
+.footer_wth{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 50px 0 50px 0;
+}
+.ftr_border_ctn{
+    width: 73vw;
+    padding-top: 50px;
+    border-top: var(--green-color) 2px solid;
+}
+.footer_header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.footer_header h1{
+    font-size: 30px;
+    color: rgb(85, 202, 85);
+}
+.footer_ftr{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+}
+.footer_ftr a img {
+    height: 5rem;
+    background-color: rgba(160, 159, 159, 0.733);
+    border-radius: 50px;
+    transition: 0.5s;
+  }

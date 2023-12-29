@@ -3,7 +3,6 @@
     justify-content: center;
     width: 100%;
     padding-bottom: 100px;
-    border-top: rgb(85, 202, 85) solid 2px;
 }
 
 .idx_deux_div {
@@ -16,6 +15,7 @@
 .idx_deux {
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
 }
 
 .idx_deux_dx {
@@ -45,17 +45,20 @@
 .idx_deux_img {
     transition: transform 0.3s, filter 0.3s;
     filter: blur(5px);
+    transform: scale(0.9);
 }
 
 .overGameDiv {
     transform: scale(1.2);
     /* ou la valeur d'agrandissement souhaitée */
     filter: blur(0px);
+    z-index: 3;
     /* ou la valeur de floutage souhaitée */
 }
 
 .overGameDivMiddle {
     transform: scale(1.2);
+    z-index: 2;
     /* ou la valeur d'agrandissement souhaitée */
     filter: blur(0px);
     /* ou la valeur de floutage souhaitée */
@@ -69,4 +72,13 @@
 
 .idx_deux_img_i {
     width: 250px;
+}
+.idx_deux_ctn_frt{
+    display: flex;
+    width: 40%;
+}
+.idx_deux_frt{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
 }

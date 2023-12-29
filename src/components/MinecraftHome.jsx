@@ -1,6 +1,33 @@
+import { useEffect, useState } from 'react';
 import mc from '../content/minecraftProjectMaps'
 
 export default function MinecraftHome(){
+
+    const [imgSize, setImgSize] = useState(0);
+
+    function carousel(){
+        const img = document.querySelector('.idx_card_mc_slider');
+        const widthBox = img.getBoundingClientRect();
+        const imgSize = widthBox.width;
+        setImgSize(imgSize)
+    }
+
+    function handleClickCrl(){
+        const carousel = document.querySelector('.carousel_idx')
+        const btnleft = document.getElementById('left')
+        const btnright = document.getElementById('right')
+        btnleft.addEventListener('click', () => {
+            carousel.scrollLeft -= imgSize
+        })
+        btnright.addEventListener('click', () => {
+            carousel.scrollLeft += imgSize
+        })
+    }
+
+    useEffect(() => (
+        carousel()
+    ), [])
+
     return (
         <>
             <div className="idx_mc_carousel">
@@ -11,7 +38,7 @@ export default function MinecraftHome(){
                 </div>
                 
                 <div className="carousel_idx_ctn">
-                    <i id="left" className="left fa-solid fa-angle-left"></i>
+                    <i id="left" className="left fa-solid fa-angle-left" onClick={() => {handleClickCrl()}}></i>
                     <ul className="carousel_idx">
                         {mc.map((img, index) => (
                             <li key={index} className="idx_card_mc_slider">
@@ -21,24 +48,17 @@ export default function MinecraftHome(){
                             </li>
                         ))}
                     </ul>
-                    <i id="right" className="right fa-solid fa-angle-right"></i>
+                    <i id="right" className="right fa-solid fa-angle-right" onClick={() => {handleClickCrl()}}></i>
                 </div>
-            </div>
-            
-            <div className="idx_tres_ctn">
-                <div className="idx_tres_div">
-                    <div className="idx_tres">
-                        <div className="idx_tres_ctn_frt">
-                            <div className="idx_tres_frt">
-                                <div className="idx_tres_p_gch">
-                                    <p>
-                                        Spécialiser dans l'architecture et le terraforming, j'ai travaillé sur différents
-                                        projets Minecraft International.
-                                    </p>
-                                </div>
-                                <span className="idx_tres_span"><a href="minecraft.html">En savoir plus...</a></span>
-                            </div>
+                <div className="idx_tres_ctn">
+                    <div className="idx_tres_frt">
+                        <div className="idx_tres_p_gch">
+                            <p>
+                                Spécialiser dans l'architecture et le terraforming, j'ai travaillé sur différents
+                                projets Minecraft International.
+                            </p>
                         </div>
+                        <span className="idx_tres_span"><a href="">En savoir plus...</a></span>
                     </div>
                 </div>
             </div>

@@ -38,7 +38,7 @@ export function MobileGame() {
                         </div>
                         <div className="idx_deux_ctn_frt">
                             <div className="idx_deux_frt">
-                                <h2 className="idx_deux_h">01. Travaux personnels !</h2>
+                                <h2 className="idx_deux_h">Jeu mobile !</h2>
                                 <p className="idx_deux_t_g">
                                     A. Jeu mobile 2D (platforme)
                                 </p>
@@ -53,11 +53,7 @@ export function MobileGame() {
                                 <span className="idx_deux_span">Date de sortie prévue pour 2024.</span>
                             </div>
                         </div>
-
-
-
                     </div>
-
                 </div>
             </div >
         </>

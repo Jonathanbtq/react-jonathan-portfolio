@@ -1,0 +1,51 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: var(--footer-color);
+    padding: 20px 0 20px 0;
+    margin-top: 150px;
+    position: relative;
+}
+.gandalf_lien{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: -100px;
+    width: 50%;
+    opacity: 0.2;
+    text-decoration: none;
+}
+.gandalf_lien.visible {
+    opacity: 1; /* Lorsqu'il est visible, passe à l'opacité 1 */
+}
+.gandalf_lien img{
+    width: 50px;
+    /* opacity: 0.2; */
+}
+.gandalf_lien p{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    /* opacity: 0.2; */
+}
+.foot_bot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.footer_citation{
+    font-size: 20px;
+    color: white;
+}
+.foot_bot p{
+    font-size: 20px;
+}
+.foot_bot a{
+    font-size: 15px;
+    color: var(--green-color);
+}
