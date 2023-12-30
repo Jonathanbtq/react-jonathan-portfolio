@@ -49,3 +49,13 @@ footer{
     font-size: 15px;
     color: var(--green-color);
 }
+footer img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    z-index: 1;
+    mask-image: linear-gradient(to left, transparent 20%, black 80%);
+}
