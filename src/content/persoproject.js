@@ -5,7 +5,7 @@ const persoproject = [
         img: 'https://jonathanbotquin.fr/images/lilalysshop/lilalys1.PNG',
         description: 'E-commerce de crochet.',
         stack: [
-            'Symfony',
+            'SYMFONY',
             'HTML',
             'CSS',
             'JS'
@@ -17,7 +17,7 @@ const persoproject = [
         img: 'https://jonathanbotquin.fr/images/maquette/lordblock.PNG',
         description: 'Site communautaire, guilde basé sur un serveur du jeu Minecraft',
         stack: [
-            'Symfony',
+            'SYMFONY',
             'HTML',
             'CSS',
             'JS'
@@ -29,7 +29,7 @@ const persoproject = [
         img: 'https://jonathanbotquin.fr/images/maquette/Link\'zProfile.PNG',
         description: 'Site de sauvegarde le lien externe.',
         stack: [
-            'Symfony',
+            'SYMFONY',
             'HTML',
             'CSS',
             'JS'
@@ -41,7 +41,7 @@ const persoproject = [
         img: 'https://jonathanbotquin.fr/images/artblog/artB2.PNG',
         description: 'Site en ligne, proposant de mettre en ligne leurs créations. Art dessin, peinture, E-designs',
         stack: [
-            'Symfony',
+            'SYMFONY',
             'HTML',
             'CSS',
             'JS'
@@ -65,7 +65,7 @@ const persoproject = [
         img: 'https://jonathanbotquin.fr/images/portoflioImg.PNG',
         description: 'Portfolio personnel',
         stack: [
-            'React'
+            'REACT'
         ]
     },
 ]

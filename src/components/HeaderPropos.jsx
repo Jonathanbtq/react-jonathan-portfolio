@@ -30,6 +30,5 @@ export default function HeaderPropos() {
                 </div>
             </div>
         </div>
-
     )
 }

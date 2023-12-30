@@ -31,7 +31,7 @@ export function MobileGame() {
                                         onMouseEnter={() => onOver(index)}
                                         onMouseLeave={() => onOver(null)}
                                     >
-                                        <img src={url} alt="" class="idx_deux_img_i" />
+                                        <img src={url} alt="" className="idx_deux_img_i" />
                                     </div>
                                 ))}
                             </article>

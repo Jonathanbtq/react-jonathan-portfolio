@@ -28,18 +28,18 @@ export default function Footer(){
         <>
             <footer>
                 {/* {isVisible && (
-                    <button class="gandalf_lien" href="#" alt="Gandalf" onClick={scrollToTop}>
+                    <button className="gandalf_lien" href="#" alt="Gandalf" onClick={scrollToTop}>
                         <img src={gandalf} alt="" />
                         <p>Haut de page !</p>
                     </button>
                 )} */}
-                <div class="foot_bot">
-                    <citation auteur="Jonathan botquin" date="28/01/2022" class="footer_citation">
-                    "01100001 01100010 01100011"
-                    </citation><br />
+                <div className="foot_bot">
+                    <div auteur="Jonathan botquin" date="28/01/2022" className="footer_citation">
+                        "01100001 01100010 01100011"
+                    </div>
 
                     <p>Copyright Jonathan Botquin - Tous droits réservés</p>
-                    <a class="obfusc" href="mailto:botquin.jonathan@yahoo.fr">Me contacter !</a>
+                    <a className="obfusc" href="mailto:botquin.jonathan@yahoo.fr">Me contacter !</a>
                 </div>
                 <img src={gif1} alt="" />
             </footer>

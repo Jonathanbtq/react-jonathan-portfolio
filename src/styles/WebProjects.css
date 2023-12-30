@@ -50,7 +50,7 @@
     background-color: rgb(56, 61, 85);
     border-radius: 25px;
     padding: 3px;
-    margin: 10px;
+    margin: 0 10px 10px 10px;
     width: 30%;
     cursor: pointer;
     position: relative;
@@ -178,6 +178,17 @@
 .idx_cnq_content_p {
     display: flex;
     flex-wrap: nowrap;
+    width: 100%;
+}
+
+.idx_cnq_crd_icon{
+    height: 3vw;
+    width: 3vw;
+    margin-right: 10px;
+}
+
+.idx_cnq_crd_icon img{
+    height: 100%;
     width: 100%;
 }
 

@@ -2,11 +2,39 @@ import { useEffect } from "react";
 import { useState } from "react"
 import persoproject from "../content/persoproject"
 
+import symfony from '../assets/img/symfony-icon.webp'
+import css from '../assets/img/csslogo.png'
+import js from '../assets/img/jslogo.png'
+import html from '../assets/img/htmlicon.png'
+import bootstrap from '../assets/img/bootstrap.png'
+import php from '../assets/img/phpicon.png'
+import react from '../assets/img/reacticon.png'
+
 export default function webprojects() {
 
     const [selectedProject, setSelectedProject] = useState(null)
     const [isDetailVisible, setIsDetailVisible] = useState(false);
     const [isProjetId, setIsProjetId] = useState(null);
+
+    function renderStackIcon(stack) {
+        const iconMap = {
+          'SYMFONY': symfony,
+          'CSS': css,
+          'JS': js,
+          'HTML': html,
+          'BOOTSTRAP': bootstrap,
+          'PHP': php,
+          'REACT': react,
+        };
+      
+        const iconSrc = iconMap[stack];
+      
+        if (iconSrc) {
+          return <img className="idx_cnq_crd_icon" src={iconSrc} alt={stack} />;
+        }
+      
+        return null;
+    }
 
     function handleGetData({ projet, index }) {
         if (selectedProject === projet) {
@@ -58,7 +86,7 @@ export default function webprojects() {
                             <i class="fas fa-link"></i>
                             <div className="idx_cnq_content_p">
                                 {selectedProject.stack.map((stack, index) => (
-                                    <p key={index}>{stack}</p>
+                                    renderStackIcon(stack, index)
                                 ))}
                             </div>
                         </div>

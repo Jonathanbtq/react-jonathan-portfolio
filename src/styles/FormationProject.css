@@ -27,7 +27,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-bottom: 50px;
     width: 100%;
     align-items: center;
     box-shadow: 5px -1px 20px 5px rgb(50, 55, 77);
@@ -55,13 +55,21 @@
     font-weight: bold;
 }
 
+.lang_use_prt_frm{
+    padding-top: 20px;
+}
 .prt_frm_card_stack {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    justify-content: flex-start;
+    justify-content: start;
 }
-
+.prt_frm_crd_icon{
+    height: 3vw;
+    width: 3vw;
+    margin-right: 10px;
+}
 .prt_frm_card_stack img {
-    width: 10%;
+    height: 100%;
+    width: 100%;
 }

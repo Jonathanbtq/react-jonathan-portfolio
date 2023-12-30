@@ -1,6 +1,34 @@
 import formaProjects from "../content/formaProjects"
+import React from "react"
+
+import symfony from '../assets/img/symfony-icon.webp'
+import css from '../assets/img/csslogo.png'
+import js from '../assets/img/jslogo.png'
+import html from '../assets/img/htmlicon.png'
+import bootstrap from '../assets/img/bootstrap.png'
+import php from '../assets/img/phpicon.png'
 
 export default function FormationProjects() {
+
+    function renderStackIcon(stack) {
+        const iconMap = {
+          'SYMFONY': symfony,
+          'CSS': css,
+          'JS': js,
+          'HTML': html,
+          'BOOTSTRAP': bootstrap,
+          'PHP': php,
+          'REACT': react,
+        };
+      
+        const iconSrc = iconMap[stack];
+      
+        if (iconSrc) {
+          return <img className="idx_cnq_crd_icon" src={iconSrc} alt={stack} />;
+        }
+      
+        return null;
+    }
 
     function isEven(number) {
         return number % 2 === 0;
@@ -22,14 +50,28 @@ export default function FormationProjects() {
                                 <div className="prt_frm_card_content">
                                     <h3>{projet.name}</h3>
                                     <p>{projet.description}</p>
-                                    <p>Langages utilisés :</p>
+                                    <p className="lang_use_prt_frm">Langages utilisés :</p>
                                     <div className="prt_frm_card_stack">
                                         {projet.array_options.map((options, optionsIndex) => (
-                                            <div key={optionsIndex}>
+                                            <React.Fragment  key={optionsIndex}>
                                                 {options.stacks.map((stack, stackIndex) => (
-                                                    <img key={stackIndex} src={`URL_DE_VOTRE_LOGO_${stack}.png`} alt={stack} />
+                                                    <div className="prt_frm_crd_icon" key={stackIndex}>
+                                                        {stack === 'SYMFONY' ? (
+                                                        <img src={symfony} alt={stack} />
+                                                        ) : stack === 'CSS' ? (
+                                                        <img src={css} alt={stack} />
+                                                        ) : stack === 'JS' ? (
+                                                        <img src={js} alt={stack} />
+                                                        ) : stack === 'HTML' ? (
+                                                            <img src={html} alt={stack} />
+                                                        ) : stack === 'BOOTSTRAP' ? (
+                                                            <img src={bootstrap} alt={stack} />
+                                                        ) : stack === 'PHP' ? (
+                                                            <img src={php} alt={stack} />
+                                                        ) : null}
+                                                  </div>
                                                 ))}
-                                            </div>
+                                            </React.Fragment>
                                         ))}
                                     </div>
                                 </div>
@@ -39,14 +81,28 @@ export default function FormationProjects() {
                                 <div className="prt_frm_card_content">
                                     <h3>{projet.name}</h3>
                                     <p>{projet.description}</p>
-                                    <p>Langages utilisés :</p>
+                                    <p className="lang_use_prt_frm">Langages utilisés :</p>
                                     <div className="prt_frm_card_stack">
                                         {projet.array_options.map((options, optionsIndex) => (
-                                            <div key={optionsIndex}>
+                                            <React.Fragment  key={optionsIndex}>
                                                 {options.stacks.map((stack, stackIndex) => (
-                                                    <img key={stackIndex} src={`URL_DE_VOTRE_LOGO_${stack}.png`} alt={stack} />
+                                                    <div className="prt_frm_crd_icon" key={stackIndex}>
+                                                        {stack === 'SYMFONY' ? (
+                                                            <img src={symfony} alt={stack} />
+                                                        ) : stack === 'CSS' ? (
+                                                            <img src={css} alt={stack} />
+                                                        ) : stack === 'JS' ? (
+                                                            <img src={js} alt={stack} />
+                                                        ) : stack === 'HTML' ? (
+                                                            <img src={html} alt={stack} />
+                                                        ) : stack === 'BOOTSTRAP' ? (
+                                                            <img src={bootstrap} alt={stack} />
+                                                        ) : stack === 'PHP' ? (
+                                                            <img src={php} alt={stack} />
+                                                        ) : null}
+                                                  </div>
                                                 ))}
-                                            </div>
+                                            </React.Fragment>
                                         ))}
                                     </div>
                                 </div>
