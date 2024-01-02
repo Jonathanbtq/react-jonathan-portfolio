@@ -11,6 +11,9 @@ const formaProjects = [
                     'SYMFONY',
                     'JS'
                 ],
+                img: [
+                    
+                ]
             }
         ]
     },
