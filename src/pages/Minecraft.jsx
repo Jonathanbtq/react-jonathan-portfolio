@@ -1,7 +1,13 @@
+import Footer from "../components/Footer";
+import ReseauxFooter from "../components/ReseauxFooter";
+import HeaderMinecraft from "../components/minecraft/HeaderMinecraft";
+
 function Minecraft(){
     return (
         <>
-            <div className="">Portfolio Minecraft</div>
+            <HeaderMinecraft />
+            <ReseauxFooter />
+            <Footer />
         </>
     )
 }
