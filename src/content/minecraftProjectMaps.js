@@ -1,7 +1,7 @@
 const mcProjectMaps = [
     {
         name: 'Medieval Spawn',
-        description: "Construit en 2021 pour le youtuber américain 'TechWithTim' qui avait pour projet de réaliser un serveur communautaire. Le projet m'a plu, j'ai tout de suite accepté !",
+        description: "Construit en 2021 pour le youtuber américain 'TechWithTim' qui avait pour projet de réaliser un serveur communautaire.",
         img: 'http://jonathanbotquin.fr/images/minecraft/medieval.png',
         array_options: [
             {
@@ -50,7 +50,7 @@ const mcProjectMaps = [
     {
         name: 'La cité de l\'anneau',
         description: 'Le plus gros projet que j\'ai réalisé à ce jour ! Je suis très fier du résultat. PS: J\'ai perdu 1/3 de la map... ',
-        img: 'https://jonathanbotquin.fr/images/lilalysshop/lilalys1.PNG',
+        img: 'http://jonathanbotquin.fr/images/minecraft/meilleurprojet.png',
         array_options: [
             {
                 time: 'Plusieurs semaines',
@@ -84,26 +84,26 @@ const mcProjectMaps = [
         ]
     },
     {
-        name: '',
-        description: 'https://lilalysshop.jonathanbotquin.fr/',
+        name: 'SteamPunk Hub',
+        description: '',
         img: 'http://jonathanbotquin.fr/images/sliderIndex/3.png',
         array_options: [
             {
-                time: '15h',
+                time: '8h',
                 theme: 'Medieval',
-                size: '150x150'
+                size: '90x90'
             }
         ]
     },
     {
-        name: '',
-        description: '',
+        name: 'Dark Castle',
+        description: 'An DarkCastle on a forgotten land !',
         img: 'http://jonathanbotquin.fr/images/sliderIndex/5.png',
         array_options: [
             {
-                time: '15h',
-                theme: 'Medieval',
-                size: '150x150'
+                time: '18h',
+                theme: 'DarkFantasy',
+                size: '450x450'
             }
         ]
     },

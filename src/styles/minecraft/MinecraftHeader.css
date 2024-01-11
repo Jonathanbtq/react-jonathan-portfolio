@@ -1,0 +1,121 @@
+.mc_ctn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.mc_header_div{
+    display: flex;
+    flex-wrap: wrap;
+    width: 73vw;
+    margin: 50px 0 50px 0;
+    align-items: center;
+}
+.mc_header_lft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 49%;
+}
+.mc_header_lft h1{
+    color: var(--green-color);
+    width: 100%;
+}
+.mc_header_lft p{
+    color: white;
+    width: 100%;
+}
+.mc_ligne{
+    width: 50%;
+    border-top: 1px solid white;
+}
+.mc_header_btn{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.mc_header_btn a{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 20px 0 0;
+    width: 35px;
+}
+.mc_header_btn img{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.mc_header_rgt{
+    display: flex;
+    width: 49%;
+}
+.mc_header_rgt img{
+    display: flex;
+    width: 100%;
+}
+
+/******/
+
+.mc_mdl_div{
+    display: flex;
+    flex-direction: column;
+    width: 73vw;
+}
+.mc_mdl_card{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    width: 100%;
+}
+.mc_mdl_card_img{
+    display: flex;
+    align-items: center;
+    width: 49%;
+}
+.mc_mdl_card_img img{
+    width: 100%;
+}
+.mc_mdl_crd_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: rgb(79, 84, 110);
+    width: 46%;
+}
+.mc_mdl_ctn_div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.mc_mdl_crd_content h2{
+    font-size: var(--green-light);
+    font-size: 25px;
+    font-weight: bold;
+}
+.mc_mdl_crd_content p{
+    color: white;
+    width: 100%;
+}
+.mc_crd_detail{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.mc_crd_dtl{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.185);
+    border-radius: 5px;
+}
+.mc_crd_dtl h3{
+    color: white;
+}
+.mc_crd_dtl p{
+    color: white;
+    width: auto;
+}
