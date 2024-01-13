@@ -1,5 +1,5 @@
 import formaProjects from "../content/formaProjects"
-import React from "react"
+import React, { useRef, useState } from "react"
 
 import symfony from '../assets/img/symfony-icon.webp'
 import css from '../assets/img/csslogo.png'
@@ -34,6 +34,24 @@ export default function FormationProjects() {
         return number % 2 === 0;
     }
 
+    const [scrollX, setScrollX] = useState(0);
+    const containerRef = useRef(null)
+
+    const handleScroll = (direction) => {
+        const container = containerRef.current
+        console.log(container)
+        if(!container) return
+
+        const containerWidth =container.clientWidth
+        const moveAmount = containerWidth / 2;
+
+        if (direction === "left") {
+        setScrollX((prev) => Math.max(prev - moveAmount, 0));
+        } else if (direction === "right") {
+        setScrollX((prev) => Math.min(prev + moveAmount, container.scrollWidth - containerWidth));
+        }
+    }
+
     return (
         <>
             <div className="projet_form_ctn">
@@ -47,11 +65,17 @@ export default function FormationProjects() {
                             ?
                             <div className="prt_frm_card" key={index}>
                                 {projet.array_options.map((options, optionsIndex) => (
-                                    <React.Fragment key={optionsIndex}>
-                                        {options.img.map((img, imgIndex) => (
-                                            <img src={img} alt="Images du projet" key={imgIndex} />
-                                        ))}
-                                    </React.Fragment>
+                                    <div className="prt_frm_crd_ctn" ref={containerRef} key={optionsIndex}>
+                                        <p className="left_arrow_forma" onClick={() => handleScroll('left')}>left</p>
+                                        <ul className="prt_frm_content">
+                                            {options.img.map((img, imgIndex) => (
+                                                <li>
+                                                    <img src={img} alt={`Image ${imgIndex + 1}`} key={imgIndex} />
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        <p className="right_arrow_forma" onClick={() => handleScroll('right')}>right</p>
+                                    </div>
                                 ))}
                                 <div className="prt_frm_card_content">
                                     <h3>{projet.name}</h3>

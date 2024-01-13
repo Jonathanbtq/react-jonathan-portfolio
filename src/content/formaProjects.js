@@ -11,7 +11,7 @@ const formaProjects = [
                     'JS'
                 ],
                 img: [
-                    'https://jonathanbotquin.fr/images/maquette/poleforma1.png',
+                    'https://jonathanbotquin.fr/images/maquette/poleforma1.PNG',
                     '../../assets/img/maquette/poleforma1.png',
                     '../../assets/img/maquette/poleforma2.png',
                     '../../assets/img/maquette/poleforma3.png',
@@ -58,13 +58,13 @@ const formaProjects = [
                     'JS'
                 ],
                 img: [
-                    'https://jonathanbotquin.fr/images/maquette/poleforma1.PNG',
-                    '../../assets/img/maquette/poleforma1.PNG',
-                    '../../assets/img/maquette/poleforma2.PNG',
-                    '../../assets/img/maquette/poleforma3.PNG',
-                    '../../assets/img/maquette/poleforma4.PNG',
-                    '../../assets/img/maquette/poleforma5.PNG',
-                    '../../assets/img/maquette/poleforma6.PNG',
+                    'https://jonathanbotquin.fr/images/maquette/poleforma1.png',
+                    '../../assets/img/maquette/poleforma1.png',
+                    '../../assets/img/maquette/poleforma2.png',
+                    '../../assets/img/maquette/poleforma3.png',
+                    '../../assets/img/maquette/poleforma4.png',
+                    '../../assets/img/maquette/poleforma5.png',
+                    '../../assets/img/maquette/poleforma6.png',
                 ]
             }
         ]
