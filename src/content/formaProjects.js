@@ -2,7 +2,6 @@ const formaProjects = [
     {
         name: 'Pole-Formation',
         description: "Développement d'un site de recherche de formations (front-end & back-end).",
-        img: 'https://jonathanbotquin.fr/images/maquette/poleforma1.PNG',
         array_options: [
             {
                 stacks: [
@@ -12,7 +11,13 @@ const formaProjects = [
                     'JS'
                 ],
                 img: [
-                    
+                    'https://jonathanbotquin.fr/images/maquette/poleforma1.png',
+                    '../../assets/img/maquette/poleforma1.png',
+                    '../../assets/img/maquette/poleforma2.png',
+                    '../../assets/img/maquette/poleforma3.png',
+                    '../../assets/img/maquette/poleforma4.png',
+                    '../../assets/img/maquette/poleforma5.png',
+                    '../../assets/img/maquette/poleforma6.png',
                 ]
             }
         ]
@@ -29,6 +34,15 @@ const formaProjects = [
                     'PHP',
                     'JS'
                 ],
+                img: [
+                    'https://jonathanbotquin.fr/images/maquette/poleforma1.png',
+                    '../../assets/img/maquette/poleforma1.png',
+                    '../../assets/img/maquette/poleforma2.png',
+                    '../../assets/img/maquette/poleforma3.png',
+                    '../../assets/img/maquette/poleforma4.png',
+                    '../../assets/img/maquette/poleforma5.png',
+                    '../../assets/img/maquette/poleforma6.png',
+                ]
             }
         ]
     },
@@ -43,6 +57,15 @@ const formaProjects = [
                     'CSS',
                     'JS'
                 ],
+                img: [
+                    'https://jonathanbotquin.fr/images/maquette/poleforma1.PNG',
+                    '../../assets/img/maquette/poleforma1.PNG',
+                    '../../assets/img/maquette/poleforma2.PNG',
+                    '../../assets/img/maquette/poleforma3.PNG',
+                    '../../assets/img/maquette/poleforma4.PNG',
+                    '../../assets/img/maquette/poleforma5.PNG',
+                    '../../assets/img/maquette/poleforma6.PNG',
+                ]
             }
         ]
     },
@@ -55,6 +78,15 @@ const formaProjects = [
                 stacks: [
                     'BOOTSTRAP'
                 ],
+                img: [
+                    'https://jonathanbotquin.fr/images/maquette/poleforma1.png',
+                    '../../assets/img/maquette/poleforma1.png',
+                    '../../assets/img/maquette/poleforma2.png',
+                    '../../assets/img/maquette/poleforma3.png',
+                    '../../assets/img/maquette/poleforma4.png',
+                    '../../assets/img/maquette/poleforma5.png',
+                    '../../assets/img/maquette/poleforma6.png',
+                ]
             }
         ]
     },
@@ -69,6 +101,15 @@ const formaProjects = [
                     'CSS',
                     'JS'
                 ],
+                img: [
+                    'https://jonathanbotquin.fr/images/maquette/poleforma1.png',
+                    '../../assets/img/maquette/poleforma1.png',
+                    '../../assets/img/maquette/poleforma2.png',
+                    '../../assets/img/maquette/poleforma3.png',
+                    '../../assets/img/maquette/poleforma4.png',
+                    '../../assets/img/maquette/poleforma5.png',
+                    '../../assets/img/maquette/poleforma6.png',
+                ]
             }
         ]
     }

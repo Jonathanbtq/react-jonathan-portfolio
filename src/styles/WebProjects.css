@@ -203,3 +203,53 @@
 }
 
 /*******Card Web Fin*******/
+@media (max-width: 1300px){
+    .idx_cinque_div{
+        width: 100%;
+    }
+    .idx_cinque_ctn{
+        width: 90%;
+    }
+    .card_web_ctn{
+        width: 45% !important;
+    }
+}
+@media (max-width: 700px){
+    .idx_cinque_ctn{
+        width: 90%;
+    }
+    .idx_cinque_div{
+        width: 100%;
+    }
+    .lien_page_index{
+        width: 80%;
+        min-height: 12vw !important;
+    }
+    .card_idx_prj_web{
+        flex-wrap: wrap;
+    }
+    .card_web_ctn{
+        width: 90% !important;
+    }
+    .idx_cnq_content{
+        flex-wrap: wrap;
+    }
+    .idx_cnq_ctn_right, .idx_cnq_ctn_left{
+        width: 100%;
+    }
+    .idx_cnq_ctn_left h3{
+        margin: 10px 0 10px 0;
+    }
+    .idx_cnq_ctn_left a{
+        height: 5vw;
+    }
+    .idx_cnq_crd_icon{
+        height: 15vw;
+        width: 15vw;
+    }
+}
+@media (max-width: 370px){
+    .idx_cinque_ctn{
+        width: 90%;
+    }
+}

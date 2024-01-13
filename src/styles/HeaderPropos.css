@@ -98,3 +98,38 @@
     width: 400px;
     height: 400px;
 }
+
+@media (max-width: 760px) {
+    .idx_wth_ctn{
+        height: auto;
+        margin: 30px 0 50px 0;
+    }
+    .idx_prem_frt_ctn{
+        width: 90%;
+        flex-direction: column !important;
+    }
+    .idx_prem_lft{
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .idx_prem_btn{
+        width: 100%;
+    }
+    .idx_prem_btn_li{
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .idx_prem_btn_li img{
+        width: 80% !important;
+        height: 80% !important;
+    }
+}
+@media (max-width: 400px) {
+    .idx_prem_img{
+        width: 90% !important;
+    }
+    .idx_prem_img img{
+        width: 300px !important;
+        height: 300px !important;
+    }
+}

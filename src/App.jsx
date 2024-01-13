@@ -49,7 +49,24 @@ function PageError(){
   </>
 }
 
+const NavDiv = () => {
+  return  (
+    <div>
+      <NavLink to="/" className='navLink'>HOME</NavLink>
+      <NavLink to="/minecraft" className='navLink'>MINECRAFT</NavLink>
+      <a href="#" to="/minecraft" className='navLink'>CV</a>
+      <NavLink to="/contact" className='nav_li_contact'>CONTACT</NavLink>
+    </div>
+  )
+}
+
 function Root(){
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen)
+  }
+
   return <>
     <header>
       <nav>
@@ -57,11 +74,17 @@ function Root(){
           <h1>JONATHAN</h1>
         </div>
         <div className="nav_bot">
-          <NavLink to="/" className='navLink'>HOME</NavLink>
-          <NavLink to="/minecraft" className='navLink'>MINECRAFT</NavLink>
-          <a href="#" to="/minecraft" className='navLink'>CV</a>
-          <NavLink to="/contact" className='nav_li_contact'>CONTACT</NavLink>
+          <NavDiv />
         </div>
+        <div className="nav_bot_burger" onClick={toggleMobileMenu}>
+          <div className="burger_icon">&#9776;</div>
+        </div>
+        {/* Mobile menu */}
+        {isMobileMenuOpen && (
+          <div className="nav_bot_phone">
+            <NavDiv />
+          </div>
+        )}
       </nav>
     </header>
     <div className="">

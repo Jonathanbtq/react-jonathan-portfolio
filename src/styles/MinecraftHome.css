@@ -103,3 +103,25 @@
     width: 50px;
     padding: 10px 0 10px 0;
 }
+@media (max-width: 750px) {
+    .idx_tres_t_g{
+        font-size: 35px;
+    }
+    .carousel_idx_ctn{
+        width: 100% !important;
+        max-width: none;
+    }
+    .carousel_idx_ctn i{
+        width: 12vw;
+        height: 12vw;
+    }
+    .idx_tres_ctn{
+        width: 95%;
+    }
+    .carousel_idx{
+        width: 80%;
+    }
+    .idx_card_mc_slider{
+        padding: 10px;
+    }
+}

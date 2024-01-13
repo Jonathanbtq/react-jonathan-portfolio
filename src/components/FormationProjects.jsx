@@ -23,7 +23,7 @@ export default function FormationProjects() {
       
         const iconSrc = iconMap[stack];
       
-        if (iconSrc) {
+        if (iconSrc == stack) {
           return <img className="idx_cnq_crd_icon" src={iconSrc} alt={stack} />;
         }
       
@@ -46,7 +46,13 @@ export default function FormationProjects() {
                         isEven(index)
                             ?
                             <div className="prt_frm_card" key={index}>
-                                <img src={projet.img} alt="" />
+                                {projet.array_options.map((options, optionsIndex) => (
+                                    <React.Fragment key={optionsIndex}>
+                                        {options.img.map((img, imgIndex) => (
+                                            <img src={img} alt="Images du projet" key={imgIndex} />
+                                        ))}
+                                    </React.Fragment>
+                                ))}
                                 <div className="prt_frm_card_content">
                                     <h3>{projet.name}</h3>
                                     <p>{projet.description}</p>
