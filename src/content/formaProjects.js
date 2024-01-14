@@ -1,5 +1,6 @@
 const formaProjects = [
     {
+        id: 1,
         name: 'Pole-Formation',
         description: "Développement d'un site de recherche de formations (front-end & back-end).",
         array_options: [
@@ -12,7 +13,7 @@ const formaProjects = [
                 ],
                 img: [
                     'https://jonathanbotquin.fr/images/maquette/poleforma1.PNG',
-                    '../../assets/img/maquette/poleforma1.png',
+                    'https://jonathanbotquin.fr/images/maquette/php2.PNG',
                     '../../assets/img/maquette/poleforma2.png',
                     '../../assets/img/maquette/poleforma3.png',
                     '../../assets/img/maquette/poleforma4.png',
@@ -23,6 +24,7 @@ const formaProjects = [
         ]
     },
     {
+        id: 2,
         name: 'Php Projet',
         description: "Site de création et managment de projets",
         img: 'https://jonathanbotquin.fr/images/maquette/php2.PNG',
@@ -35,7 +37,7 @@ const formaProjects = [
                     'JS'
                 ],
                 img: [
-                    'https://jonathanbotquin.fr/images/maquette/poleforma1.png',
+                    'https://jonathanbotquin.fr/images/maquette/php2.PNG',
                     '../../assets/img/maquette/poleforma1.png',
                     '../../assets/img/maquette/poleforma2.png',
                     '../../assets/img/maquette/poleforma3.png',
@@ -47,6 +49,7 @@ const formaProjects = [
         ]
     },
     {
+        id: 3,
         name: 'Sunpower',
         description: 'Landing page pour une entreprise de panneaux photovoltaique',
         img: 'https://jonathanbotquin.fr/images/maquette/sunpower1.PNG',
@@ -58,7 +61,7 @@ const formaProjects = [
                     'JS'
                 ],
                 img: [
-                    'https://jonathanbotquin.fr/images/maquette/poleforma1.png',
+                    'https://jonathanbotquin.fr/images/maquette/sunpower1.PNG',
                     '../../assets/img/maquette/poleforma1.png',
                     '../../assets/img/maquette/poleforma2.png',
                     '../../assets/img/maquette/poleforma3.png',
@@ -70,6 +73,7 @@ const formaProjects = [
         ]
     },
     {
+        id: 4,
         name: 'Lilipinso',
         description: 'Site e-commerce',
         img: 'https://jonathanbotquin.fr/images/maquette/Boots1.PNG',
@@ -79,7 +83,7 @@ const formaProjects = [
                     'BOOTSTRAP'
                 ],
                 img: [
-                    'https://jonathanbotquin.fr/images/maquette/poleforma1.png',
+                    'https://jonathanbotquin.fr/images/maquette/Boots1.PNG',
                     '../../assets/img/maquette/poleforma1.png',
                     '../../assets/img/maquette/poleforma2.png',
                     '../../assets/img/maquette/poleforma3.png',
@@ -91,6 +95,7 @@ const formaProjects = [
         ]
     },
     {
+        id: 5,
         name: 'Systematic',
         description: 'Landing page site d\'appel a projets',
         img: 'https://jonathanbotquin.fr/images/maquette/html1.PNG',
@@ -102,7 +107,7 @@ const formaProjects = [
                     'JS'
                 ],
                 img: [
-                    'https://jonathanbotquin.fr/images/maquette/poleforma1.png',
+                    'https://jonathanbotquin.fr/images/maquette/html1.PNG',
                     '../../assets/img/maquette/poleforma1.png',
                     '../../assets/img/maquette/poleforma2.png',
                     '../../assets/img/maquette/poleforma3.png',
