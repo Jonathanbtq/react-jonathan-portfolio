@@ -38,7 +38,7 @@ export default function HeaderPropos() {
                     </div>
                 </div>
 
-                <div className={`idx_prem_img ${borderClass}`}>
+                <div className="idx_prem_img">
                     <img src={profileImg} alt="" className={`idx_prem_img ${borderClass}`} />
                 </div>
             </div>
