@@ -71,7 +71,7 @@ export default function FormationProjects() {
   const ProjetMapping = () => {
     return (
       <React.Fragment>
-        {formaProjects.map((projet, projectIndex) => (
+        {formaProjects.map( projet => (
           <div className="prt_frm_card" key={projet.id}>
             {projet.array_options.map((options, optionsIndex) => (
               <div className="prt_frm_crd_ctn" key={optionsIndex} Ref={optionsIndex}>
