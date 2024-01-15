@@ -1,7 +1,20 @@
 import reseaux from '../content/reseaux'
 import profileImg from '../assets/img/pdp2.jpg'
+import { useEffect, useState } from 'react'
 
 export default function HeaderPropos() {
+    const [borderClass, setBorderClass] = useState("border_effect1")
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            const borderClasses = ["border_effect1", "border_effect2", "border_effect3", "border_effect4"]
+            const randomIndex = Math.floor(Math.random() * borderClasses.length)
+            setBorderClass(borderClasses[randomIndex])
+        }, 500)
+
+        return () => clearInterval(intervalId)
+    }, [])
+
     return (
         <div className="idx_wth_ctn">
             <div className="idx_prem_frt_ctn">
@@ -25,8 +38,8 @@ export default function HeaderPropos() {
                     </div>
                 </div>
 
-                <div className="idx_prem_img">
-                    <img src={profileImg} alt="" className="idx_prem_img" />
+                <div className={`idx_prem_img ${borderClass}`}>
+                    <img src={profileImg} alt="" className={`idx_prem_img ${borderClass}`} />
                 </div>
             </div>
         </div>

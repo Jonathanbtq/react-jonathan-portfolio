@@ -21,8 +21,8 @@ const iconMap = {
 export default function FormationProjects() {
     
     const [scrollX, setScrollX] = useState(0);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const containerRef = useRef();
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const containerRef = useRef();
 
     function isEven(number) {
         return number % 2 === 0;
@@ -69,7 +69,7 @@ export default function FormationProjects() {
     };
 
   const ProjetMapping = () => {
-    return (
+    return isEven ? (
       <React.Fragment>
         {formaProjects.map( projet => (
           <div className="prt_frm_card" key={projet.id}>
@@ -102,6 +102,42 @@ export default function FormationProjects() {
                 ))}
               </div>
             </div>
+          </div>
+        ))}
+      </React.Fragment>
+    ):(
+      <React.Fragment>
+        {formaProjects.map( projet => (
+          <div className="prt_frm_card" key={projet.id}>
+            {projet.array_options.map((options, optionsIndex) => (
+              <div className="prt_frm_card_content">
+                <h3>{projet.name}</h3>
+                <p>{projet.description}</p>
+                <p className="lang_use_prt_frm">Langages utilisés :</p>
+                <div className="prt_frm_card_stack">
+                  {projet.array_options.map((options, optionsIndex) => (
+                    <React.Fragment key={optionsIndex}>
+                      {options.stacks.map((stack, stackIndex) => (
+                        <div className="prt_frm_crd_icon" key={stackIndex}>
+                          {iconMap[stack] && <img src={iconMap[stack]} alt={stack} />}
+                        </div>
+                      ))}
+                    </React.Fragment>
+                  ))}
+                </div>
+              </div>
+            ))}
+            <div className="prt_frm_crd_ctn" key={optionsIndex} Ref={optionsIndex}>
+                <p className="left_arrow_forma" onClick={() => handleScroll('left', projet.id)}>left</p>
+                <ul className="prt_frm_content">
+                  {options.img.map((img, imgIndex) => (
+                    <li key={imgIndex}>
+                      <img src={img} alt={`Image ${imgIndex + 1}`} />
+                    </li>
+                  ))}
+                </ul>
+                <p className="right_arrow_forma" onClick={() => handleScroll('right', projectIndex)}>right</p>
+              </div>
           </div>
         ))}
       </React.Fragment>
