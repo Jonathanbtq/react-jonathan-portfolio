@@ -16,6 +16,7 @@ nav{
 .nav_top{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 45%;
 }
 .nav_top h1{
@@ -61,6 +62,11 @@ nav{
     background-color: var(--green-color) !important;
     border-radius: 5px !important;
 }
+.nav_bot_burger{
+    display: none;
+    cursor: pointer;
+    z-index: 10;
+}
 .nav_bot_phone{
     display: none;
 }
@@ -71,25 +77,33 @@ nav{
     align-items: center;
     justify-content: center;
 }
-
+@media (max-width: 1000px) {
+    nav{
+        width: 95% !important;
+        height: 100%;
+        position: relative;
+    }
+}
 @media (max-width: 700px) {
     nav{
-        width: 100%;
+        width: 100% !important;
         height: 100%;
         position: relative;
     }
     .nav_top{
-        margin: 20px 0 0 20px;
+        margin-left: 10px;
+        height: 100%;
     }
     .nav_bot{
         display: none;
     }
     .nav_bot_burger{
-        width: 60%;
+        display: flex;
+        width: 20% !important;
     }
-    .burger_icon::before{
-        width: 30%;
-        height: 30%;
+    .burger_icon{
+        font-size: 50px;
+        color: white;
     }
     .navLink{
         display: flex;
@@ -104,7 +118,8 @@ nav{
         position: absolute;
         top: 0px;
         right: 0;
-        background-color: rgba(95, 90, 90, 0.555);
+        padding-top: 70px;
+        background-color: rgba(14, 8, 8, 0.897);
         align-items: center;
         justify-content: end;
         width: 75%;
