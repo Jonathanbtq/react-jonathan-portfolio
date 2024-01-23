@@ -55,7 +55,12 @@ const NavDiv = () => {
       <NavLink to="/" className='navLink'>HOME</NavLink>
       <NavLink to="/minecraft" className='navLink'>MINECRAFT</NavLink>
       <a href="#" to="/minecraft" className='navLink'>CV</a>
-      <NavLink to="/contact" className='nav_li_contact'>CONTACT</NavLink>
+      <NavLink  className='nav_li_contact' to="mailto:botquin.jonathan@yahoo.fr"
+            onClick={(e) => {
+                window.location.href = mailto;
+                e.preventDefault();
+            }}
+        >CONTACT</NavLink>
     </div>
   )
 }
