@@ -16,9 +16,9 @@ export function MobileGame() {
                         <div className="idx_deux_dx">
                             <article className="idx_deux_art">
                                 {[
-                                    "https://jonathanbotquin.fr/images/jellygame/jelly_game.jpg",
-                                    "https://jonathanbotquin.fr/images/jellygame/Jelly_main.jpg",
-                                    "https://jonathanbotquin.fr/images/jellygame/jelly_shop.jpg"
+                                    "/src/assets/img/jellygame/jelly_game.jpg",
+                                    "/src/assets/img/jellygame/Jelly_main.jpg",
+                                    "/src/assets/img/jellygame/jelly_shop.jpg"
                                 ].map((url, index) => (
                                     <div
                                         key={index}

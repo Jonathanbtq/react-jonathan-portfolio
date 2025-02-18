@@ -9,6 +9,7 @@ import ScrollToTopButton from "../components/ScrollToTopButton";
 
 import '../styles/HeaderPropos.css'
 import './main.css'
+import '../styles/boutique/boutique.css'
 import '../styles/WebProjects.css'
 import '../styles/MobileGame.css'
 import '../styles/MinecraftHome.css'
@@ -20,9 +21,9 @@ function Home() {
     return (<>
         <HeaderPropos />
         <WebProjects />
-        <FormationProjects />
         <MobileGame />
-        <MinecraftHome />
+        <FormationProjects />
+        {/* <MinecraftHome /> */}
         <ReseauxFooter />
         <Footer />
 

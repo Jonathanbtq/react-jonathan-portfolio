@@ -41,6 +41,7 @@
 .idx_card_mc_slider{
     display: flex;
     min-width: 430px;
+    min-height: 8vw;
     padding: 20px;
 }
 .img_div_mc_card{

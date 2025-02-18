@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { RouterProvider, createBrowserRouter, Outlet, NavLink, useRouteError } from 'react-router-dom'
 import Minecraft from './pages/Minecraft'
+import Boutique from './pages/Boutique'
 import Home from './pages/Home'
 import './styles/NavBar.css'
 
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
      {
        path: 'minecraft',
        element: <Minecraft />,
+     },
+     {
+       path: 'boutique',
+       element: <Boutique />,
      },
      {
        path: 'contact',
@@ -53,6 +58,7 @@ const NavDiv = () => {
   return  (
     <div>
       <NavLink to="/" className='navLink'>HOME</NavLink>
+      <NavLink to="/boutique" className='navLink'>Boutique</NavLink>
       <NavLink to="/minecraft" className='navLink'>MINECRAFT</NavLink>
       <a href="#" to="/minecraft" className='navLink'>CV</a>
       <NavLink  className='nav_li_contact' to="mailto:botquin.jonathan@yahoo.fr"

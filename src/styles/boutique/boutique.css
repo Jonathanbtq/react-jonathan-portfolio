@@ -1,0 +1,47 @@
+.boutique_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 50px;
+}
+.boutique_mod_ctn {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+.btq_dol_mod {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.doli_mod_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 10vw;
+    height: 12vw;
+    background-color: gray;
+    margin: 10px;
+    padding: 10px;
+}
+.doli_mod_card img {
+    min-height: 6vw;
+    width: 100%;
+    background-color: rgb(224, 208, 208);
+}
+.doli_mod_card a {
+    width: 95%;
+    text-decoration: none;
+}
+.doli_mod_card p {
+    font-size: 20px;
+    width: 100%;
+    color: white;
+    margin: 0;
+}
+.doli_mod_card section {
+    width: 100%;
+}

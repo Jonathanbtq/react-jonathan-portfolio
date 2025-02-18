@@ -2,7 +2,7 @@ const mcProjectMaps = [
     {
         name: 'Medieval Spawn',
         description: "Construit en 2021 pour le youtuber américain 'TechWithTim' qui avait pour projet de réaliser un serveur communautaire.",
-        img: 'http://jonathanbotquin.fr/images/minecraft/medieval.png',
+        img: '/src/assets/img/minecraft/medieval.png',
         array_options: [
             {
                 time: '15 heures',
