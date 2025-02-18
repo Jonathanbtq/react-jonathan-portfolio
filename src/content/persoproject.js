@@ -2,7 +2,7 @@ const persoproject = [
     {
         name: 'Lilalys\'Shop',
         url: 'https://lilalysshop.jonathanbotquin.fr/',
-        img: 'https://jonathanbotquin.fr/images/lilalysshop/lilalys1.PNG',
+        img: '/src/assets/img/projet/lilalys2.png',
         description: 'E-commerce de crochet.',
         stack: [
             'SYMFONY',
@@ -14,7 +14,7 @@ const persoproject = [
     {
         name: 'Lord Block',
         url: "https://lordblock.jonathanbotquin.fr/",
-        img: 'https://jonathanbotquin.fr/images/maquette/lordblock.PNG',
+        img: '/src/assets/img/projet/lordblock.PNG',
         description: 'Site communautaire, guilde basé sur un serveur du jeu Minecraft',
         stack: [
             'SYMFONY',
@@ -26,7 +26,7 @@ const persoproject = [
     {
         name: 'Link\'Z',
         url: "https://liinkz.jonathanbotquin.fr/",
-        img: 'https://jonathanbotquin.fr/images/maquette/Link\'zProfile.PNG',
+        img: '/src/assets/img/projet/linkz.PNG',
         description: 'Site de sauvegarde le lien externe.',
         stack: [
             'SYMFONY',
@@ -38,7 +38,7 @@ const persoproject = [
     {
         name: 'ART BLOG',
         url: '#',
-        img: 'https://jonathanbotquin.fr/images/artblog/artB2.PNG',
+        img: '/src/assets/img/projet/artB2.PNG',
         description: 'Site en ligne, proposant de mettre en ligne leurs créations. Art dessin, peinture, E-designs',
         stack: [
             'SYMFONY',
@@ -50,7 +50,7 @@ const persoproject = [
     {
         name: 'MC\'Partage',
         url: '#',
-        img: 'https://jonathanbotquin.fr/images/site%20copie/ForumPage.PNG',
+        img: '/src/assets/img/projet/ForumPage.PNG',
         description: 'Site en ligne partage contenu sur le jeu minecraft',
         stack: [
             'PHP',
@@ -59,15 +59,15 @@ const persoproject = [
             'JS'
         ]
     },
-    {
-        name: 'Portfolio',
-        url: '#',
-        img: 'https://jonathanbotquin.fr/images/portoflioImg.PNG',
-        description: 'Portfolio personnel',
-        stack: [
-            'REACT'
-        ]
-    },
+    // {
+    //     name: 'Portfolio',
+    //     url: '#',
+    //     img: 'https://jonathanbotquin.fr/images/portoflioImg.PNG',
+    //     description: 'Portfolio personnel',
+    //     stack: [
+    //         'REACT'
+    //     ]
+    // },
 ]
 
 export default persoproject;

@@ -53,7 +53,7 @@ const NavDiv = () => {
   return  (
     <div>
       <NavLink to="/" className='navLink'>HOME</NavLink>
-      <NavLink to="/minecraft" className='navLink'>MINECRAFsT</NavLink>
+      <NavLink to="/minecraft" className='navLink'>MINECRAFT</NavLink>
       <a href="#" to="/minecraft" className='navLink'>CV</a>
       <NavLink  className='nav_li_contact' to="mailto:botquin.jonathan@yahoo.fr"
             onClick={(e) => {
