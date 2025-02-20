@@ -31,3 +31,65 @@ h2 {
     color: var(--body-color);
     background-color: var(--green-color);
 }
+
+.form_login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 18vw;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrage parfait */
+}
+
+.form_login button {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+    border: 1px solid rgba(160, 160, 160, 0.452);
+    border-radius: 25px;
+    top: -8px;
+    right: -8px;
+    width: 42px;
+    height: 42px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.post_log_ctn {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+ 
+.post_log_ctn div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0 10px 0;
+}
+
+.post_log_ctn input {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    border: 1px solid rgba(160, 160, 160, 0.452);
+    width: 100%;
+    height: 2vw;
+}
+
+.post_log_ctn input[type=submit] {
+    background-color: gray !important;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
