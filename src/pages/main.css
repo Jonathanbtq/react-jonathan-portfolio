@@ -65,6 +65,12 @@ h2 {
     cursor: pointer;
 }
 
+.msgerror {
+    color: red;
+    font-weight: bold;
+    margin: 2px 0 2px 0;
+}
+
 .post_log_ctn {
     display: flex;
     flex-direction: column;

@@ -6,6 +6,8 @@ const Sequelize = require('sequelize')
 const sequelize = require('./db/db')
 require('dotenv').config()
 
+app.use(express.json());
+
 const app = express()
 const port = process.env.PORT || 3500
 
@@ -14,18 +16,15 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 app.use(express.json())
 app.use(cors({
-    origin: window.location.href
+    origin: "http://localhost:5173",
+    credentials: true
 }))
-// Pour origin vérifier l'url du serveur react
-
 const User = user(sequelize, Sequelize);
-
 
 /**
  * Sécurité et login
  */
 app.post('/login', (req, res) => {
-    console.log(req);
     let login = req.body.email
     let password = req.body.password
     User.findOne({
@@ -49,3 +48,11 @@ app.post('/login', (req, res) => {
             res.status(500).json({error: 'Erreur serveur lors de la connexion'})
         })
 })
+
+// Synchroniser Sequelize avec la base de données
+sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => {
+        console.log(`🚀 Serveur lancé sur le port ${PORT}`)
+        console.log ("📌 Base de données synchronisée !");
+    });
+});
