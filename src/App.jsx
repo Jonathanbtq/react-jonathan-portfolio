@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import './styles/NavBar.css'
 import Login from './components/auth/Login'
 import AdminPage from './pages/Admin'
+import { GlobalVariablesProvider } from './contexts/GlobalVariablesContext.jsx';
 
 const currentUrl = window.location.href;
 
@@ -101,7 +102,11 @@ function Root(){
 }
 
 function App() {
-  return (<RouterProvider router={router}/>)
+  return (
+    <GlobalVariablesProvider>  {/* Correction : Envelopper avec le provider */}
+      <RouterProvider router={router}/>
+    </GlobalVariablesProvider>
+  )
 }
 
 export default App

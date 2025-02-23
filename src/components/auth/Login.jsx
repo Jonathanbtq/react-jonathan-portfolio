@@ -99,7 +99,7 @@ const Login = () => {
             <div className="post_log_ctn">
               <div>
                 <label htmlFor="">Username</label>
-                <input type="text" name="login"  value={credentials.login} onChange={handleChange} />
+                <input type="text" name="login" value={credentials.login} onChange={handleChange} />
               </div>
               <div>
               <label htmlFor="">Mot de passe</label>

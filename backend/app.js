@@ -56,21 +56,29 @@ app.post('/login', (req, res) => {
  * Création d'une variable d'environnement
  */
 app.post('/addconst', async (req, res) => {
-    if (req.body) {
-        try {
-            const {name, value, active, note} = req.body;
-            const [consts, created] = await Consts.findOrCreate({
-                where: {name},
-                defaults: {value, description}
-            });
-            if (created) {
-                res.status(201).json({mesage: "Variable created", value: consts});
-            } else {
-                res.status(400).json({ error: 'Variable already exists' });
+    const { name, value, note, active } = req.body;
+    
+    // ✅ Vérifie si les champs obligatoires sont présents
+    if (!name || !value) {
+        return res.status(400).json({ error: "Name and value are required" });
+    }
+
+    try {
+        const [consts, created] = await Const.findOrCreate({
+            where: {name},
+            defaults: { 
+                value, 
+                note: note || '', 
+                active: active !== undefined ? active : true 
             }
-        } catch (error) {
-            res.status(500).json({ error: 'Internal Server Error' });
+        });
+        if (created) {
+            res.status(201).json({message: "Variable created", value: consts});
+        } else {
+            res.status(400).json({ error: 'Variable already exists' });
         }
+    } catch (error) {
+        res.status(500).json({ error: 'Internal Server Error' });
     }
 })
 

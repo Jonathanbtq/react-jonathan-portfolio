@@ -47,7 +47,7 @@ export default function webprojects() {
     }
 
     useEffect(() => {
-        console.log('test')
+        
     }, [isDetailVisible])
 
     return (

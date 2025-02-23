@@ -6,6 +6,7 @@ import FormationProjects from "../components/FormationProjects";
 import ReseauxFooter from "../components/ReseauxFooter";
 import Footer from "../components/Footer";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import axios from 'axios';
 
 import '../styles/HeaderPropos.css'
 import './main.css'
@@ -22,9 +23,12 @@ function Home() {
     const [constVariable, setConstVariable] = useState(null);
 
     useEffect(() => {
-        axios.get('http://localhost:3500/addconst')
+        fetch('http://localhost:3500/getConst')
             .then(response => {
-                setConstVariable(response.data.value);
+                if (response.data) {
+                    setConstVariable(response.data.value);
+                }
+                console.log(response);
             })
             .catch(error => {
                 console.error('There was an error retrieving the global variable!', error);
