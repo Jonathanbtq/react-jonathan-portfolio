@@ -71,6 +71,20 @@ h2 {
     margin: 2px 0 2px 0;
 }
 
+.atxt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0 0 0 20px;
+    border-radius: 5px;
+    padding: 3px;
+    height: 1vw;
+    font-weight: bold;
+    background-color: var(--green-color);
+    color: var(--body-color);
+}
+
 .post_log_ctn {
     display: flex;
     flex-direction: column;

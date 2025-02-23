@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { RouterProvider, createBrowserRouter, Outlet, NavLink, useRouteError } from 'react-router-dom'
 import Minecraft from './pages/Minecraft'
 import Boutique from './pages/Boutique'
 import Home from './pages/Home'
 import './styles/NavBar.css'
 import Login from './components/auth/Login'
+import AdminPage from './pages/Admin'
 
 const currentUrl = window.location.href;
 
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
        element: <Boutique />,
      },
      {
+       path: 'admin',
+       element: <AdminPage />,
+     },
+     {
        path: 'contact',
        element: <div>Page de contact</div>,
      },
@@ -43,7 +48,6 @@ function PageError(){
     </p>
   </>
 }
-
 
 const NavDiv = () => {
   return  (
