@@ -9,18 +9,19 @@ export const GlobalVariablesProvider = ({ children }) => {
   const [variables, setVariables] = useState(null); // null tant que les données ne sont pas chargées
 
   useEffect(() => {
-    const fetchGlobalVariables = async () => {
-      try {
-        const response = await axios.get('http://localhost:3500/getConst');
-        if (response.data) {
-            setVariables(response.data);
-        }
-      } catch (error) {
-        console.error('Erreur lors de la récupération des variables globales:', error);
-      }
-    };
-
-    fetchGlobalVariables();
+    fetch('http://localhost:3500/getConstValue')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Erreur HTTP ! Statut : ${response.status}`);
+            }
+            return response.json(); // Convertir la réponse en JSON
+        })
+        .then(data => {
+            setVariables(data); // Met à jour l'état
+        })
+        .catch(error => {
+            console.error('Erreur lors de la récupération des variables globales:', error);
+        });
   }, []);
 
   return (
