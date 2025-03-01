@@ -1,6 +1,7 @@
 import { Component, useEffect, useState } from "react";
 import { Cookies } from 'react-cookie';
 import { useGlobalVariables } from '../contexts/GlobalVariablesContext';
+import ModuleNewForm from '../components/form/ModuleNewForm';
 import ConstForm from "../components/admin/constform";
 import axios from "axios";
 import { useNavigate } from "react-router-dom"
@@ -146,6 +147,9 @@ const AdminPage = ({setIsLoggedIn}) => {
             <input type="submit" />
           </form>
           }
+        </div>
+        <div className="admin_module_new">
+          <ModuleNewForm />
         </div>
       </div>
     </div>

@@ -18,7 +18,7 @@ export const GlobalVariablesProvider = ({ children }) => {
         })
         .then(data => {
           setVariables(data); // Met à jour l'état
-          console.log(variables);
+          console.log(data);
         })
         .catch(error => {
             console.error('Erreur lors de la récupération des variables globales:', error);

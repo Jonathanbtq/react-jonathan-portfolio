@@ -69,7 +69,7 @@ const Login = () => {
             setIsFormVisible(false);
         })
         .catch((error) => {
-        console.error('Une erreur est survenue lors de la requête de connexion', error)
+          console.error('Une erreur est survenue lors de la requête de connexion', error)
         })
     }
 

@@ -38,7 +38,7 @@ module.exports = (Sequelize, DataTypes) => {
         active: {
             type: DataTypes.INTEGER,
             allowNull: false
-        }
+        },
     }, {
         timestamps: true,
     });

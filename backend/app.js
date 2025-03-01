@@ -1,8 +1,10 @@
 const express = require('express')
 const sequelize = require('./db/db')
+const multer = require("multer");
 const user = require('./Models/User')
 const Consts = require('./Models/Const')
-const moduleDolibarr = require('./Models/moduleDolibarr')
+const moduleDolibarrs = require('./Models/moduleDolibarr')
+const Ecm_Filess = require('./Models/ecm_file')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const Sequelize = require('sequelize')
@@ -14,14 +16,48 @@ const app = express()
 app.use(express.json());
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
+app.use('/uploads', express.static('uploads'));
 
 app.use(cors({
     origin: "http://localhost:5173",
-    credentials: true
+    credentials: true,
 }))
 const User = user(sequelize, Sequelize);
 const Const = Consts(sequelize, Sequelize);
-const moduleDolibarr = moduleDolibarr(sequelize, Sequelize);
+const moduleDolibarr = moduleDolibarrs(sequelize, Sequelize);
+const Ecm_Files = Ecm_Filess(sequelize, Sequelize);
+
+const path = require('path'); // Assure-toi d'importer le module `path`
+
+const fs = require('fs');
+const createFolderIfNotExists = (folder) => {
+    if (!fs.existsSync(folder)) {
+        fs.mkdirSync(folder, { recursive: true });
+    }
+};
+createFolderIfNotExists("uploads/modules/");
+createFolderIfNotExists("uploads/modules/zip/");
+
+const storageImgModule = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, "uploads/modules/"); // 📁 Dossier où seront stockées les images
+    },
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + path.extname(file.originalname)); // 🔄 Renommer le fichier avec un timestamp
+    },
+});
+const upload = multer({ storage: storageImgModule });
+
+// Upload des fichiers Zip
+const storageZipFile = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, "uploads/modules/zip"); // 📁 Dossier où seront stockées les images
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.originalname); // 🔄 Renommer le fichier avec un timestamp
+    },
+})
+const uploadZip = multer({ storage: storageZipFile});
 
 /**
  * Sécurité et login
@@ -124,7 +160,6 @@ app.get('/getConst', async (req, res) => {
         }
 
         res.json(variables);
-
     } catch (error) {
         console.error("Erreur lors de la récupération des variables globales:", error);
         res.status(500).json({ error: "Internal Server Error" });
@@ -171,29 +206,66 @@ app.post('/updateConst', async (req, res) => {
     }
 })
 
-app.post('/addDoliModule', async (req, res) => {
-    const { name, ref, description, version_dolibarr, verison_module, prix_ht, prix_ttc, active } = req.body;
+app.post('/addDoliModule', upload.fields([
+        { name: "file", maxCount: 1 },
+        { name: "zipFile", maxCount: 1 }
+    ]), async (req, res) => {
     try {
-        if (!name || !ref || !prix_ht || !version_dolibarr || !verison_module || !active || !prix_ttc) {
+        const { name, ref, description, version_dolibarr, version_module, prix_ht, prix_ttc, active } = req.body;
+        
+        // Vérification des fichiers
+        const imgFile = req.files['file'] ? req.files['file'][0] : null;
+        const zipFile = req.files['zipFile'] ? req.files['zipFile'][0] : null;
+
+        if (!name || !ref || !version_dolibarr || !version_module || !active) {
             return res.status(400).json({ error: "Les données envoyées ne sont pas valides" });
         }
 
         const nouveauModule = await moduleDolibarr.create({
-            name: name,
-            ref: ref,
-            version_dolibarr: version_dolibarr,
-            description: description,
-            version_module: verison_module,
-            prix_ht: prix_ht,
-            prix_ttc: prix_ttc,
-            active: active 
+            name,
+            ref,
+            version_dolibarr,
+            description,
+            version_module,
+            prix_ht,
+            prix_ttc,
+            active
         })
-        console.log("Module ajouté avec succès :", nouveauModule.toJSON());
+
+         // Ajout de l'image (si présente)
+         if (imgFile) {
+            await Ecm_Files.create({
+                filename: imgFile.filename,
+                object_id: nouveauModule.id,
+                description,
+                path: imgFile.path,
+            });
+        }
+
+        // Ajout du fichier ZIP
+        await Ecm_Files.create({
+            filename: `${zipFile.filename}_${nouveauModule.id}.zip`,
+            object_id: nouveauModule.id,
+            description: "Zip du module",
+            path: `uploads/modules/zip/${zipFile.filename}`,
+        });
+
+        return res.status(200).json({ message: "Le module a été ajouté avec succès", data: nouveauModule });
     } catch (error) {
         console.error("Une erreur est survenue lors de l'update de la constante", error);
         res.status(500).json({error: "Internat Server Error"});
     }
 })
+
+app.get('/getModules', async (req, res) => {
+    try {
+        const modules = await moduleDolibarr.findAll();
+        res.json(modules); // Envoie les modules sous forme de JSON
+    } catch (error) {
+        console.error('Erreur lors de la récupération des modules:', error);
+        res.status(500).json({ error: 'Erreur interne du serveur' });
+    }
+});
 
 // Synchroniser Sequelize avec la base de données
 sequelize.sync({ force: false }).then(() => {

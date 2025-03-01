@@ -83,7 +83,7 @@ export default function webprojects() {
                             <h3>{selectedProject.name}</h3>
                             <p>{selectedProject.description}</p>
                             <a href={selectedProject.url}>Lien vers le site</a>
-                            <i class="fas fa-link"></i>
+                            <i className="fas fa-link"></i>
                             <div className="idx_cnq_content_p">
                                 {selectedProject.stack.map((stack, index) => (
                                     renderStackIcon(stack, index)
