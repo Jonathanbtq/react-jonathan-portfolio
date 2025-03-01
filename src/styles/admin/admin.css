@@ -1,0 +1,51 @@
+.main_ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.admin_ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.admin_ctn button {
+    margin: 10px;
+}
+
+.form_admin_const {
+    justify-content: center;
+    align-items: center;
+}
+
+.const_admin_ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.admin_ctn h3 {
+    font-size: 25px;
+    color: white;
+}
+
+.form_admin_const label {
+    display: flex;
+    color: white;
+    justify-content: flex-end;
+    width: 10%;
+}
+
+.form_admin_const div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.form_admin_const input {
+    margin: 0 5px 0 5px;
+}

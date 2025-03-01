@@ -100,49 +100,54 @@ const AdminPage = ({setIsLoggedIn}) => {
   }
   
   return (
-    <div>
-      <h1>{message}</h1>
-      <button onClick={handleLogout}>Deconnexion</button>
-      {user && (
-        <div>
-          <p>Nom: {user.username}</p>
-          <p>Email: {user.email}</p>
-          {/* Vous pouvez ajouter d'autres informations de l'utilisateur ici */}
-        </div>
-      )}
-      { !newConstFormVisible && 
-        <button onClick={handleOpen}>Nouvelle Constante</button>
-      }
-      { newConstFormVisible && 
-        <ConstForm setConstFormVisible={handleConstClose}/>
-      }
-      {/* Afficher les variables globales récupérées */}
-      {msgErrorUpdate && 
-        <p>{msgErrorUpdate}</p>
-      }
-      {constData && 
-        <form onSubmit={handleSubmit}>
-        {constData.map((element, index) => (
-          <div key={index}>
-            <label htmlFor={`constvalue-${index}`}>{element.name}</label>
-            <input 
-              id={`constvalue-${index}`}
-              name="value" 
-              onChange={(e) => handleConstChange(e, index)} 
-              type="number" 
-              value={element.value} 
-            />
-            <input 
-              name="note" 
-              type="text" 
-              onChange={(e) => handleConstChange(e, index)} 
-              value={element.note} 
-            />
+    <div className="main_ctn">
+      <div className="admin_ctn">
+        <h1>{message}</h1>
+        <button className="btn_action" onClick={handleLogout}>Deconnexion</button>
+        {user && (
+          <div>
+            <p>Nom: {user.username}</p>
+            <p>Email: {user.email}</p>
+            {/* Vous pouvez ajouter d'autres informations de l'utilisateur ici */}
           </div>
-        ))}
-        <input type="submit" />
-      </form>
-      }
+        )}
+        <div className="const_admin_ctn">
+          <h3>Variable système</h3>
+          { !newConstFormVisible && 
+            <button className="btn_action btn_width_300" onClick={handleOpen}>Nouvelle Constante +</button>
+          }
+          { newConstFormVisible && 
+            <ConstForm setConstFormVisible={handleConstClose}/>
+          }
+          {/* Afficher les variables globales récupérées */}
+          {msgErrorUpdate && 
+            <p>{msgErrorUpdate}</p>
+          }
+          {constData && 
+            <form className="form form_admin_const" onSubmit={handleSubmit}>
+            {constData.map((element, index) => (
+              <div key={index}>
+                <label htmlFor={`constvalue-${index}`}>{element.name}</label>
+                <input 
+                  id={`constvalue-${index}`}
+                  name="value" 
+                  onChange={(e) => handleConstChange(e, index)} 
+                  type="text" 
+                  value={element.value} 
+                />
+                <input 
+                  name="note" 
+                  type="text" 
+                  onChange={(e) => handleConstChange(e, index)} 
+                  value={element.note} 
+                />
+              </div>
+            ))}
+            <input type="submit" />
+          </form>
+          }
+        </div>
+      </div>
     </div>
   );
 };

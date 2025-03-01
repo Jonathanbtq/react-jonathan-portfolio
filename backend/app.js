@@ -2,6 +2,7 @@ const express = require('express')
 const sequelize = require('./db/db')
 const user = require('./Models/User')
 const Consts = require('./Models/Const')
+const moduleDolibarr = require('./Models/moduleDolibarr')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const Sequelize = require('sequelize')
@@ -20,6 +21,7 @@ app.use(cors({
 }))
 const User = user(sequelize, Sequelize);
 const Const = Consts(sequelize, Sequelize);
+const moduleDolibarr = moduleDolibarr(sequelize, Sequelize);
 
 /**
  * Sécurité et login
@@ -104,7 +106,7 @@ app.get('/getConstValue', async (req, res) => {
 
         res.json(formattedVariables);
 
-    } catch {
+    } catch (error) {
         console.error("Erreur lors de la récupération des variables globales:", error);
         res.status(500).json({ error: "Internal Server Error" });
     }
@@ -123,7 +125,7 @@ app.get('/getConst', async (req, res) => {
 
         res.json(variables);
 
-    } catch {
+    } catch (error) {
         console.error("Erreur lors de la récupération des variables globales:", error);
         res.status(500).json({ error: "Internal Server Error" });
     }
@@ -163,7 +165,31 @@ app.post('/updateConst', async (req, res) => {
         }
 
         return res.status(200).json({ message: "Les constantes ont été mises à jour avec succès", data: updatedRecords });
-    } catch {
+    } catch (error) {
+        console.error("Une erreur est survenue lors de l'update de la constante", error);
+        res.status(500).json({error: "Internat Server Error"});
+    }
+})
+
+app.post('/addDoliModule', async (req, res) => {
+    const { name, ref, description, version_dolibarr, verison_module, prix_ht, prix_ttc, active } = req.body;
+    try {
+        if (!name || !ref || !prix_ht || !version_dolibarr || !verison_module || !active || !prix_ttc) {
+            return res.status(400).json({ error: "Les données envoyées ne sont pas valides" });
+        }
+
+        const nouveauModule = await moduleDolibarr.create({
+            name: name,
+            ref: ref,
+            version_dolibarr: version_dolibarr,
+            description: description,
+            version_module: verison_module,
+            prix_ht: prix_ht,
+            prix_ttc: prix_ttc,
+            active: active 
+        })
+        console.log("Module ajouté avec succès :", nouveauModule.toJSON());
+    } catch (error) {
         console.error("Une erreur est survenue lors de l'update de la constante", error);
         res.status(500).json({error: "Internat Server Error"});
     }
