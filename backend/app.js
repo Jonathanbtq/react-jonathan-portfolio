@@ -22,10 +22,20 @@ app.use(cors({
     origin: "http://localhost:5173",
     credentials: true,
 }))
+
 const User = user(sequelize, Sequelize);
 const Const = Consts(sequelize, Sequelize);
 const moduleDolibarr = moduleDolibarrs(sequelize, Sequelize);
 const Ecm_Files = Ecm_Filess(sequelize, Sequelize);
+
+moduleDolibarr.hasMany(Ecm_Files, {
+    foreignKey: 'object_id',
+    as: 'files'
+})
+Ecm_Files.belongsTo(moduleDolibarr, {
+    foreignKey: 'object_id',
+    as: 'module'
+});
 
 const path = require('path'); // Assure-toi d'importer le module `path`
 
@@ -259,7 +269,13 @@ app.post('/addDoliModule', upload.fields([
 
 app.get('/getModules', async (req, res) => {
     try {
-        const modules = await moduleDolibarr.findAll();
+        const modules = await moduleDolibarr.findAll({
+            include: [{
+                model: Ecm_Files,
+                as: 'files', // Utilisation de l'alias défini dans la relation
+            }]
+        });
+
         res.json(modules); // Envoie les modules sous forme de JSON
     } catch (error) {
         console.error('Erreur lors de la récupération des modules:', error);

@@ -12,6 +12,7 @@ export default function Boutique() {
         fetch('http://localhost:3500/getModules')
             .then(response => response.json())
             .then(data => {
+                console.log(data);
                 setModuleData(data);
             })
             .catch(error => {
@@ -24,33 +25,49 @@ export default function Boutique() {
             <div className="boutique_mod_ctn">
                 <h2>Modules Dolibarr</h2>
                 <div className="btq_dol_mod">
-                    {moduleDolibarr.map((module, key) => {
-                        return (
-                            <div className="doli_mod_card" key={key}>
-                                <div className="btq_doli_mod_vrs" title="Version Dolibarr (min - max)">
-                                    <span>{module.version} </span>
-                                </div>
-                                <img src={`${window.location.origin}${module.image}`} alt={module.name} />
-                                <section>
-                                    <a href={module.url}>
-                                        <p>{module.name}</p>
-                                    </a>
-                                    <p>{module.prix} € TTC</p>
-                                </section>
-                            </div>
-                        );
-                    })}
                     {moduleData.map((module, index) => {
                         return (
                             <div className="doli_mod_card" key={index}>
                                 <div className="btq_doli_mod_vrs" title="Version Dolibarr (min - max)">
                                     <span>{module.version_module} </span>
                                 </div>
-                                <img src={`${window.location.origin}${module.image}`} alt={module.name} />
+                                {[...module.files].sort((a, b) => {
+                                    // Sort .zip files to the end
+                                    if (a.filename.includes(".zip")) return 1;
+                                    if (b.filename.includes(".zip")) return -1;
+                                    return 0;
+                                }).map(file => {
+                                    if (file.filename) {
+                                        return (
+                                            <div key={file.id}>
+                                                {!file.filename.includes(".zip") && (
+                                                    // Render an image for non-.zip files
+                                                    <img
+                                                        src={`${window.location.origin}/backend/uploads/modules/${file.filename}`}
+                                                        alt={module.name}
+                                                    />
+                                                )}
+                                                {file.filename.includes(".zip") && (
+                                                    // Render a download link for .zip files
+                                                    <section>
+                                                        <a
+                                                            href={`${window.location.origin}/backend/uploads/modules/${file.filename}`}
+                                                            download
+                                                        >
+                                                            {module.name}
+                                                        </a>
+                                                    </section>
+                                                )}
+                                            </div>
+                                        );
+                                    }
+                                    return null;
+                                })}
                                 <section>
-                                    <a href={module.url}>
+                                    {/* Vérifier si aucun fichier .zip n'est présent */}
+                                    {!module.files.some(file => file.filename.includes(".zip")) && (
                                         <p>{module.name}</p>
-                                    </a>
+                                    )}
                                     <p>{module.prix} € TTC</p>
                                 </section>
                             </div>
