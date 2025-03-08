@@ -39,7 +39,7 @@ export default function Boutique() {
                                 }).map(file => {
                                     if (file.filename) {
                                         return (
-                                            <div key={file.id}>
+                                            <div key={file.id} style={{width:"100%"}}>
                                                 {!file.filename.includes(".zip") && (
                                                     // Render an image for non-.zip files
                                                     <img
