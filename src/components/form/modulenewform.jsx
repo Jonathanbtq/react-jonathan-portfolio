@@ -64,16 +64,16 @@ export default function ModuleNewForm({ setConstFormVisible }) {
                     setMessageClass('msgsuccess');
                 }
                 setMessage(data.message);
-                setModuleData({
-                    name: '',
-                    ref: '',
-                    description: '',
-                    version_dolibarr: '',
-                    version_module: '',
-                    prix_ht: '',
-                    prix_ttc: '',
-                    active: '',
-                });
+                // setModuleData({
+                //     name: '',
+                //     ref: '',
+                //     description: '',
+                //     version_dolibarr: '',
+                //     version_module: '',
+                //     prix_ht: '',
+                //     prix_ttc: '',
+                //     active: '',
+                // });
             })
             .catch(error => {
                 setMessage(error.message);
@@ -83,6 +83,7 @@ export default function ModuleNewForm({ setConstFormVisible }) {
 
     return (
         <div className="form_ctn_const_admin">
+            <h3>Nouveau module</h3>
             {message && 
                 <p className={messageClass}>{message}</p>
             }
@@ -127,7 +128,7 @@ export default function ModuleNewForm({ setConstFormVisible }) {
                     <label htmlFor="file">fichier Zip</label>
                     <input type="file" name="zipFile" onChange={handleZipFileChange} accept=".zip" />
                 </div>
-                <input type="submit" value="Ajouter" />
+                <input type="submit" className="btn_action" value="Ajouter" />
             </form>
         </div>
     );

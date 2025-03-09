@@ -29,7 +29,7 @@ export default function Boutique() {
                         return (
                             <div className="doli_mod_card" key={index}>
                                 <div className="btq_doli_mod_vrs" title="Version Dolibarr (min - max)">
-                                    <span>{module.version_module} </span>
+                                    <span>{module.version_dolibarr} </span>
                                 </div>
                                 {[...module.files].sort((a, b) => {
                                     // Sort .zip files to the end

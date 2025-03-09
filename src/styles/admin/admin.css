@@ -10,6 +10,7 @@
     flex-direction: column;
     align-items: center;
     width: 90%;
+    padding-bottom: 200px;
 }
 
 .admin_ctn button {
@@ -48,4 +49,53 @@
 
 .form_admin_const input {
     margin: 0 5px 0 5px;
+}
+
+.admin_module_new {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form_ctn_const_admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    width: 100%;
+}
+.form_ctn_const_admin form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+.form_ctn_const_admin form div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.form_ctn_const_admin form div label, .form_ctn_const_admin form div input {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 50%;
+}
+.form_ctn_const_admin form div label {
+    color: white;
+}
+.form_ctn_const_admin form div input {
+    color: gray;
+    border: none;
+    margin: 3px;
+    padding: 10px;
+    border-radius: 5px;
+}
+div[name="description"] {
+    height: 500px;
+}
+.form_ctn_const_admin input[type="submit"] {
+    width: 30%;
 }

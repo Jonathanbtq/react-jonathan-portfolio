@@ -252,6 +252,25 @@ app.post('/addDoliModule', upload.fields([
             });
         }
 
+        let nameConst = 'MOD_'+name;
+        console.log(nameConst);
+        try {
+            const [consts, created] = await Const.findOrCreate({
+                where: { name: nameConst },  // Correction ici
+                defaults: { 
+                    value: '1', 
+                    note: "Const module " + name, 
+                    active: 1
+                }
+            });
+        
+            if (!created) {
+                console.error("⚠️ La constante existe déjà :", nameConst);
+            }
+        } catch (error) {
+            console.error("❌ Erreur Sequelize :", error);
+        }
+
         // Ajout du fichier ZIP
         await Ecm_Files.create({
             filename: `${zipFile.filename}_${nouveauModule.id}.zip`,
@@ -263,7 +282,7 @@ app.post('/addDoliModule', upload.fields([
         return res.status(200).json({ message: "Le module a été ajouté avec succès", data: nouveauModule });
     } catch (error) {
         console.error("Une erreur est survenue lors de l'update de la constante", error);
-        res.status(500).json({error: "Internat Server Error"});
+        res.status(500).json({error: "Internat Server Error"+error});
     }
 })
 

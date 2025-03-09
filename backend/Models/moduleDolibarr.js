@@ -16,7 +16,7 @@ module.exports = (Sequelize, DataTypes) => {
             unique: true,
         },
         version_dolibarr: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         description: {
