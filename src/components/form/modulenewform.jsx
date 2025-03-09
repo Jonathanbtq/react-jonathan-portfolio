@@ -64,16 +64,16 @@ export default function ModuleNewForm({ setConstFormVisible }) {
                     setMessageClass('msgsuccess');
                 }
                 setMessage(data.message);
-                // setModuleData({
-                //     name: '',
-                //     ref: '',
-                //     description: '',
-                //     version_dolibarr: '',
-                //     version_module: '',
-                //     prix_ht: '',
-                //     prix_ttc: '',
-                //     active: '',
-                // });
+                setModuleData({
+                    name: '',
+                    ref: '',
+                    description: '',
+                    version_dolibarr: '',
+                    version_module: '',
+                    prix_ht: '',
+                    prix_ttc: '',
+                    active: '',
+                });
             })
             .catch(error => {
                 setMessage(error.message);
