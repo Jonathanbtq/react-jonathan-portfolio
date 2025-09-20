@@ -22,7 +22,7 @@ export default function HeaderPropos() {
                     <h1 className="idx_prem_h">A Propos</h1>
                     <p className="idx_prem_p">JONATHAN BOTQUIN</p>
                     <div className="idx_prem_propos">
-                        Développeur web FullStack. Vous retrouverez sur ce site mes différents projets, de la programmation et du Minecraft.
+                        Développeur web FullStack. Vous retrouverez sur ce site mes différents projets et de la programmation.
                     </div>
 
                     <div className="idx_prem_btn">

@@ -1,6 +1,6 @@
 import github from '../assets/img/github.png'
 import twitter from '../assets/img/twitter.png'
-import discord from '../assets/img/discord.png'
+import discord from '../assets/img/discord_logo.png'
 import instagram from '../assets/img/instagram.png'
 
 const reseaux = [

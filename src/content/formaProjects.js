@@ -20,26 +20,26 @@ const formaProjects = [
             ]
         }
     },
-    {
-        id: 2,
-        name: 'Php Projet',
-        description: "Site de création et managment de projets",
-        img: 'https://jonathanbotquin.fr/images/maquette/php2.PNG',
-        array_options: {
-            stacks: [
-                'HTML',
-                'CSS',
-                'PHP',
-                'JS'
-            ],
-            img: [
-                '/src/assets/img/maquette/php1.PNG',
-                '/src/assets/img/maquette/php2.png',
-                '/src/assets/img/maquette/php3.png',
-                '/src/assets/img/maquette/php4.png',
-            ]
-        }
-    },
+    // {
+    //     id: 2,
+    //     name: 'Php Projet',
+    //     description: "Site de création et managment de projets",
+    //     img: 'https://jonathanbotquin.fr/images/maquette/php2.PNG',
+    //     array_options: {
+    //         stacks: [
+    //             'HTML',
+    //             'CSS',
+    //             'PHP',
+    //             'JS'
+    //         ],
+    //         img: [
+    //             '/src/assets/img/maquette/php1.PNG',
+    //             '/src/assets/img/maquette/php2.png',
+    //             '/src/assets/img/maquette/php3.png',
+    //             '/src/assets/img/maquette/php4.png',
+    //         ]
+    //     }
+    // },
     {
         id: 3,
         name: 'Sunpower',

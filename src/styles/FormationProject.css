@@ -121,6 +121,7 @@
 .prt_frm_card_stack img {
     height: 100%;
     width: 100%;
+    background: white;
 }
 
 @media (max-width: 900px){

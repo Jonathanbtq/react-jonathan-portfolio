@@ -2,7 +2,7 @@ const persoproject = [
     {
         name: 'Lilalys\'Shop',
         url: 'https://lilalysshop.jonathanbotquin.fr/',
-        img: '/src/assets/img/projet/lilalys2.png',
+        img: '/src/assets/img/projet/lilalysshop.png',
         description: 'E-commerce de crochet.',
         stack: [
             'SYMFONY',
@@ -39,7 +39,7 @@ const persoproject = [
         name: 'ART BLOG',
         url: '#',
         img: '/src/assets/img/projet/artB2.PNG',
-        description: 'Site en ligne, proposant de mettre en ligne leurs créations. Art dessin, peinture, E-designs',
+        description: 'Site de partage d\'art, dessin, peinture, E-designs',
         stack: [
             'SYMFONY',
             'HTML',
@@ -51,7 +51,7 @@ const persoproject = [
         name: 'MC\'Partage',
         url: '#',
         img: '/src/assets/img/projet/ForumPage.PNG',
-        description: 'Site en ligne partage contenu sur le jeu minecraft',
+        description: 'Site de partage contenu sur le jeu minecraft',
         stack: [
             'PHP',
             'HTML',
